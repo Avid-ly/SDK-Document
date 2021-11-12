@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<title>Gamehaus文档</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="icon" href="logo.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 右侧目录样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <!-- gif插件样式 -->
+  <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
+
+  <link rel="stylesheet" href="/js/feebback.css">
+
+</head>
+
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      // 名称
+      name: 'Gamehaus文档',
+      // 开启侧边栏，需要目录下有_sidebar.md文件
+      loadSidebar: true,
+      // 切换页面后跳回页面顶部
+      auto2top: true,
+      // 导航栏
+      loadNavbar: true,
+      //<!-- 底部上下篇页签配置 -->
+      pagination: {
+        previousText: '上一步骤',
+        nextText: '下一步骤',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      //<!-- 右侧目录配置 -->
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6, h7',
+        title: '目录',
+      },
+      //<!-- 文本高亮配置 -->
+      'flexible-alerts': {
+        // style: 'flat',
+        attention:{
+          label:"Error"
+        }
+      },
+
+      // <!-- 搜索配置 -->
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '文档内搜索',
+        noData: '找不到结果',
+        depth: 3,
+        hideOtherSidebarContent: false,
+      },
+      copyCode: {
+        buttonText : '复制代码',
+        errorText  : '发生错误',
+        successText: '已拷贝到剪贴板'
+      },
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 底部上下篇页签插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 右侧目录插件 -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!-- 代码copy插件 -->
+  <script src="https://unpkg.com/docsify-copy-code"></script>
+  <!-- 文本高亮插件 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- gif插件 -->
+  <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
+
+
+  <!-- 友盟统计 -->
+  <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1280527911&web_id=1280527911"></script>
+
+  <!-- 反馈插件 -->
+  <script src="/js/feedback.js"></script>
+
+</body>
+</html>
