@@ -1,12 +1,62 @@
-.feebbackdiv{
-	float: right;
+/*.feebbackdiv{
+  float: right;
 }
 
 .tip {
-	border: 1px solid #c4c9d2;
-	border-radius: 2px;
-	padding: 3px 12px;
-	margin-left: 8px;
-	cursor: pointer;
-	background: #f5f9ff;
+  border: 1px solid #c4c9d2;
+  border-radius: 2px;
+  padding: 3px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+  background: #f5f9ff;
+  display: inline;
+  text-align:center;
+  width: 50px;
+}
+
+.bootom_right {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 1px;
+    bottom: 10px;
+    z-index: 10;
+    padding: 3px 3px 0 3px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: #fff;
+    width: 180px;
+}*/
+
+
+.feebbackdiv{
+  padding: 10px 0px;
+  
+}
+
+.feebbacktip {
+  border: 1px solid #c4c9d2;
+  border-radius: 2px;
+  padding: 0px 0px;
+  margin-left: 8px;
+  cursor: pointer;
+  background: #f5f9ff;
+  display: inline-block;
+  text-align:center;
+  width: 50px;
+}
+
+.bootom_right {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 5px;
+    bottom: 5px;
+    z-index: 10;
+    padding: 3px 3px 0 3px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: #f5f9ff;
+    width: 170px;
+    text-align:center;
 }

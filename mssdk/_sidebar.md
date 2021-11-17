@@ -3,15 +3,14 @@
 <center>MSSDK接入文档</center>
 
 * iOS
-  * [工程引入](mssdk/ios/ios_start.md)
+  * [开始使用](mssdk/ios/ios_start.md)
+  * [项目设置](mssdk/ios/ios_setting.md)
   * [初始化](mssdk/ios/ios_init.md)
   * [激励视频](mssdk/ios/ios_reward.md)
   * [插屏广告](mssdk/ios/ios_interstitial.md)
   * [横幅广告](mssdk/ios/ios_banner.md)
-  * [GDPR调用](mssdk/ios/ios_gdpr.md)
-  * 支持iOS14
-	* [Facebook启用广告追踪功能](mssdk/ios/ios_facebook.md)
-	* [SKAdNetwork ID 自动工具](mssdk/ios/ios_skadnetwork.md)
+  * [GDPR](mssdk/ios/ios_gdpr.md)
+  * [API列表](mssdk/ios/ios_api.md)
   * [常见问题](mssdk/ios/ios_faq.md)
 
 * Android
