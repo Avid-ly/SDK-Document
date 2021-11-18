@@ -3,10 +3,13 @@
 <center>AASDK接入文档</center>
 
 * iOS
-  * [工程引入](aasdk/ios/ios_start.md)
-  * [API介绍](aasdk/ios/ios_api.md)
+  * [开始使用](aasdk/ios/ios_start.md)
+  * [项目设置](aasdk/ios/ios_setting.md)
+  * [初始化](aasdk/ios/ios_init.md)
+  * [登录](aasdk/ios/ios_login.md)
+  * [用户中心](aasdk/ios/ios_usercenter.md)
+  * [API概览](aasdk/ios/ios_api.md)
   * [常见问题](aasdk/ios/ios_faq.md)
-
 
 * Android
   * [工程引入](aasdk/android/android_start.md)
