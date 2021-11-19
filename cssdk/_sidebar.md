@@ -7,8 +7,12 @@
   * [产品上线前的准备](cssdk/other/release.md)
 
 * iOS
-  * [工程引入](cssdk/ios/ios_start.md)
-  * [API介绍](cssdk/ios/ios_api.md)
+  * [开始使用](cssdk/ios/ios_start.md)
+  * [项目设置](cssdk/ios/ios_setting.md)
+  * [初始化](cssdk/ios/ios_init.md)
+  * [客服与反馈](cssdk/ios/ios_feedback.md)
+  * [API概览](cssdk/ios/ios_api.md)
+  * [常见问题](cssdk/ios/ios_faq.md)
 
 * Android
   * [工程引入](cssdk/android/android_start.md)
