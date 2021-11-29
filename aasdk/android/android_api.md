@@ -161,3 +161,4 @@ AASdk.setAAUTokenCallback(new AASTokenCallback() {
 ```java
    AASdk.setGPLoginVisible(false);
 ```
+

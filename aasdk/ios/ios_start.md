@@ -87,3 +87,4 @@ pod install
 # 3. 常见接入问题
 
 如果接入完成之后编译不通过，可以查询[常见问题](/aasdk/ios/ios_faq.md)来解决
+

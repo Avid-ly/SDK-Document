@@ -1,40 +1,9 @@
-/*.feebbackdiv{
-  float: right;
-}
-
-.tip {
-  border: 1px solid #c4c9d2;
-  border-radius: 2px;
-  padding: 3px 12px;
-  margin-left: 8px;
-  cursor: pointer;
-  background: #f5f9ff;
-  display: inline;
-  text-align:center;
-  width: 50px;
-}
-
-.bootom_right {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: 1px;
-    bottom: 10px;
-    z-index: 10;
-    padding: 3px 3px 0 3px;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    background: #fff;
-    width: 180px;
-}*/
-
-
-.feebbackdiv{
+.feedbackdiv{
   padding: 10px 0px;
   
 }
 
-.feebbacktip {
+.feedbacktip {
   border: 1px solid #c4c9d2;
   border-radius: 2px;
   padding: 0px 0px;
@@ -59,4 +28,35 @@
     background: #f5f9ff;
     width: 170px;
     text-align:center;
+}
+
+
+.bootom_right_content {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 5px;
+    bottom: 5px;
+    z-index: 10;
+    padding: 10px 20px 20px 20px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: #f5f9ff;
+    width: 450px;
+}
+
+.FeedBack--problemList--1UK4lss {
+  list-style: none;
+}
+
+.FeedBack--textArea--3EDq1XC {
+  width: 410px;
+  height: 100px;
+}
+
+.FeedBack-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transform: translate(50%, -50%);
 }

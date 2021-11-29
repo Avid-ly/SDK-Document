@@ -39,3 +39,4 @@
 | signedRequest | NSString | 验证token |
 | loginMode | int | 登录方式 |
 
+

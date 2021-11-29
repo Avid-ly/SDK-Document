@@ -3,31 +3,40 @@
 <title>Gamehaus文档</title>
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="icon" href="logo.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <title>Document</title>
+
+  <!-- 图标 -->
+  <link rel="icon" href="logo.ico">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <!-- 右侧目录样式 -->
   <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
   <!-- gif插件样式 -->
   <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
 
+  <!-- 反馈插件样式 -->
   <link rel="stylesheet" href="/js/feebback.css">
-  <link rel="stylesheet" href="/js/index.css">
+
+  <!-- 左侧折叠插件样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
 
 </head>
 
 
 <body>
   <div id="app"></div>
+  <nav id="navxx"></nav>
   <script>
     window.$docsify = {
       // 名称
       name: 'Gamehaus文档',
       // 开启侧边栏，需要目录下有_sidebar.md文件
       loadSidebar: true,
+
       // 切换页面后跳回页面顶部
       auto2top: true,
       // 导航栏
@@ -43,7 +52,7 @@
       toc: {
         scope: '.markdown-section',
         headings: 'h1, h2, h3, h4, h5, h6, h7',
-        title: '目录',
+        title: '本页目录',
       },
       //<!-- 文本高亮配置 -->
       'flexible-alerts': {
@@ -84,12 +93,15 @@
   <!-- gif插件 -->
   <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
 
-
-  <!-- 友盟统计 -->
-  <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1280527911&web_id=1280527911"></script>
-
   <!-- 反馈插件 -->
   <script src="/js/feedback.js"></script>
+  <script src="/js/changeCss.js"></script>
+
+  <!-- 左侧折叠插件 --> 
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+   <!-- 友盟统计 -->
+  <div style="display:none"><script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1280527911&web_id=1280527911"></script></div>
 
 </body>
 </html>

@@ -164,3 +164,5 @@ AASDKApi.getLoginedGGid();
 // 默认是隐藏登录动画的，如果要显示请设置为true
  AASDKApi.setReloginViewVisible(true);
 ```
+
+

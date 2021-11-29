@@ -1,19 +1,27 @@
 function plugin (hook, vm) {
   hook.beforeEach(function(html) {
 
-    url = window.location.href;
-    // var editHtml = '<div class="ssssxxx"><span>以上内容是否对您有帮助？</span><button type="button" onclick="helpfulClick()">是</button><button type="button" onclick="unhelpfulClick()">否</button></div>';
+    var editHtml1 = '<div id="feedback" class="bootom_right" ><div>这个文档是否有帮助？</div><div class="feedbackdiv"><div class="feedbacktip" onclick="helpfulClick()">是</div><div class="feedbacktip" type="button" onclick="unhelpfulClick()">否</div></div></div>';
+    
+    var editHtml2 = '<div id="bootom_right_content"  class="bootom_right_content" style="visibility:hidden"><button class="FeedBack-close-button"  onclick="feedbackContentClose()">X</button><p>在文档使用中是否遇到以下问题</p><ul class="FeedBack--problemList--1UK4lss"><li><div><input type="checkbox" readonly="" value="1"><span>内容错误</span></div></li><li><div><input type="checkbox" readonly="" value="2"><span>更新不及时</span></div></li><li><div><input type="checkbox" readonly="" value="4"><span>链接错误</span></div></li><li><div><input type="checkbox" readonly="" value="8"><span>缺少代码/图片示例</span></div></li><li><div><input type="checkbox" readonly="" value="16"><span>太简单/步骤待完善</span></div></li><li><div><input type="checkbox" readonly="" value="32"><span>其他</span></div></li></ul><div><p>更多建议</p><textarea class="FeedBack--textArea--3EDq1XC" placeholder="请详细描述在文档使用中遇到的问题或改进建议"></textarea><button class="FeedBack--button" onclick="submitFeedbackContent()"><span>提交建议</span></button></div></div>';
 
-    // var editHtml = '<div class="feebbackdiv"><span>以上内容是否对您有帮助？</span><span class="tip" onclick="helpfulClick()">是</span><span class="tip" type="button" onclick="unhelpfulClick()">否</span></div>';
-
-    // var editHtml = '<div class="bootom_right">以上内容是否有帮助？<span class="tip" onclick="helpfulClick()">是</span><span class="tip" type="button" onclick="unhelpfulClick()">否</span></div>';
-
-    var editHtml = '<div class="bootom_right"><div>这个文档是否有帮助？</div><div class="feebbackdiv"><div class="feebbacktip" onclick="helpfulClick()">是</div><div class="feebbacktip" type="button" onclick="unhelpfulClick()">否</div></div></div>';
+    // var editHtml = editHtml1 + "<br>" + editHtml2;
 
     return (
-      html + editHtml
+      html + editHtml1 + "<br>" + editHtml2
     );
   });
+
+  // hook.afterEach(function(html, next) {
+
+  //   var editHtml1 = '<div id="feedback" class="bootom_right" ><div>这个文档是否有帮助？</div><div class="feedbackdiv"><div class="feedbacktip" onclick="helpfulClick()">是</div><div class="feedbacktip" type="button" onclick="unhelpfulClick()">否</div></div></div>';
+    
+  //   var editHtml2 = '<div id="bootom_right_content" class="bootom_right_content"style="visibility:hidden"><button class="FeedBack-close-button" onclick="feedbackContentClose()">X</button><p>在文档使用中是否遇到以下问题</p><ul class="FeedBack--problemList--1UK4lss"><li><div><input type="checkbox"readonly=""value="1"><span>内容错误</span></div></li><li><div><input type="checkbox"readonly=""value="2"><span>更新不及时</span></div></li><li><div><input type="checkbox"readonly=""value="4"><span>链接错误</span></div></li><li><div><input type="checkbox"readonly=""value="8"><span>缺少代码/图片示例</span></div></li><li><div><input type="checkbox"readonly=""value="16"><span>太简单/步骤待完善</span></div></li><li><div><input type="checkbox"readonly=""value="32"><span>其他</span></div></li></ul><div><p>更多建议</p><textarea class="FeedBack--textArea--3EDq1XC"placeholder="请详细描述在文档使用中遇到的问题或改进建议"></textarea><button class="FeedBack--button" onclick="submitFeedbackContent()"><span>提交建议</span></button></div></div>';
+
+  //   var editHtml = "<br>" + editHtml2;
+
+  //   next(html+editHtml);
+  // });
 }
 
 function helpfulClick() {
@@ -25,7 +33,37 @@ function helpfulClick() {
 function unhelpfulClick() {
   var url = window.location.href;
   _czc.push(['_trackEvent','feedback-unhelpful', url, 'xx']);
+
+  var feedback = document.getElementById('feedback');
+  feedback.style.visibility = "hidden";
+
+  var bootom_right_content = document.getElementById('bootom_right_content');
+  bootom_right_content.style.visibility = "visible";
+
+}
+
+function feedbackContentClose() {
+  var url = window.location.href;
+
+  var feedback = document.getElementById('feedback');
+  feedback.style.visibility = "visible";
+
+  var bootom_right_content = document.getElementById('bootom_right_content');
+  bootom_right_content.style.visibility = "hidden";
+
+}
+
+function submitFeedbackContent() {
+  var url = window.location.href;
+
+  var feedback = document.getElementById('feedback');
+  feedback.style.visibility = "visible";
+
+  var bootom_right_content = document.getElementById('bootom_right_content');
+  bootom_right_content.style.visibility = "hidden";
+
   alert("感谢您的反馈");
+
 }
 
 window.$docsify.plugins = [].concat(plugin, window.$docsify.plugins);
