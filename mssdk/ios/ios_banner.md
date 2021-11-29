@@ -164,14 +164,14 @@ _bannerView.delegate = self;
 - 如何更新横幅广告
 - 如何设置横幅广告的大小
 
-> 何时关闭和恢复游戏背景音乐与逻辑
+> <span id="banner_faq1">何时关闭和恢复游戏背景音乐与逻辑</span>
 
 建议在调用`willPresentModalViewForAd`时关闭背景音乐，暂停游戏逻辑；在收到`didDismissModalViewForAd`回调时将控制器交换给游戏，恢复背景音乐，开始游戏逻辑。
 
-> 如何更新横幅广告
+> <span id="banner_faq2">如何更新横幅广告</span>
 
 横幅广告会一直显示在页面上，且会定时自动刷新，股不需要开发者主动进行刷新操作
 
-> 如何设置合适的横幅广告的大小
+> <span id="banner_faq3">如何设置合适的横幅广告的大小</span>
 
 建议横幅广告的宽度与设备宽度保持一直，横幅广告在横向会自动居中显示；横幅广告的高度，在iPhone上建议设置为50，在iPad上，建议设置为90。

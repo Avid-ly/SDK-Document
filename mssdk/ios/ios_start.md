@@ -109,7 +109,7 @@ pod install
 - 遇到`"_vDSP_mmul"、"_vDSP_dotpr"、"_vDSP_vclip"`
 - 遇到`"std::xxx"、"_cxa_throw"`
 
-> 遇到`bitcode bundle could not be generated because`
+> <span id="start_faq1">1 遇到`bitcode bundle could not be generated because`</span>
 
 当编译或打包遇到如下错误的时候
 
@@ -124,7 +124,7 @@ bitcode bundle could not be generated because 'xxx/FBSDKCoreKit.framework/FBSDKC
 `TARGETS` --> `ProductName` --> `Build Settings` --> `Enable Bitcode` 置为`NO`
 
 
-> 遇到`Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility50`
+> <span id="start_faq2">2 遇到`Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility50`</span>
 
 当编译或打包遇到如下错误的时候
 
@@ -144,7 +144,7 @@ bitcode bundle could not be generated because 'xxx/FBSDKCoreKit.framework/FBSDKC
 - 编译一下，路径填写不对编译会报错
 
 
-> 遇到`"_vDSP_mmul"、"_vDSP_dotpr"、"_vDSP_vclip"`
+> <span id="start_faq3">3 遇到遇到`"_vDSP_mmul"、"_vDSP_dotpr"、"_vDSP_vclip"`</span>
 
 当编译或打包遇到`"_vDSP_mmul"、"_vDSP_dotpr"、"_vDSP_vclip"` 说明缺少`Accelerate.framework`
 
@@ -152,7 +152,7 @@ bitcode bundle could not be generated because 'xxx/FBSDKCoreKit.framework/FBSDKC
 
 在`TAGETS` --> `ProductName` --> `Build Phases` --> `Link Binary With Libraries`中添加`Accelerate.framework`即可
 
-> 遇到`"std::xxx"、"_cxa_throw"`
+> <span id="start_faq4">4 遇到`"std::xxx"、"_cxa_throw"`</span>
 
 当编译或打包遇到`"std::xxx"、"_cxa_throw"` 说明缺少`libc++.tbd`
 
