@@ -36,5 +36,18 @@ void resignActive();
 调用示例：
 
 ```csharp
-void resignActive();
+void OnApplicationPause(bool paused)
+ {
+        if (paused)
+        {
+        //程序进入后台时执行
+       UPTraceApi.resignActive();
+        }
+        else
+        {
+         //程序从后台进入前台时
+       UPTraceApi.becomeActive();
+         }
+    }
 ```
+
