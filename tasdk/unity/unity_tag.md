@@ -25,7 +25,7 @@
 ## 1.2 获得用户标签
 
 
-```java
+```csharp
  static void getConversionData (string afConversionData, Action<string> success, Action<string> fail) 
 ```
 
@@ -64,7 +64,7 @@ public void onGetConversionDataClick(string conversionDataJson)
 ## 2.1 获得用户标签
 
 
-```java
+```csharp
 /*
  * 获取付费用户标签
  */
@@ -81,7 +81,7 @@ public static void getPayUserLayer (Action<string> success, Action<string> fail)
 
 调用示例：
 
-```java
+```csharp
 public void onGetPayUserLayerClick() {
 
     Debug.Log ("===> call onGetPayUserLayerClick");
@@ -103,7 +103,7 @@ private void onPayUserLayerFail(string error) {
 ## 3.1 获得用户广告标签
 
 
-```java
+```csharp
 /*
  * 获得用户广告标签
  */
@@ -120,7 +120,7 @@ public static void getUserAdLayer (Action<string> success, Action<string> fail)
 
 调用示例：
 
-```java
+```csharp
 public void onGetUserAdLayerClick() {
 	UPTraceApi.getUserAdLayer(new System.Action<string>(onUserAdLayerSuccess),
 		new System.Action<string>(onUserAdLayerFail)
@@ -139,7 +139,7 @@ private void onUserAdLayerFail(string error) {
 # 4.DeepLink标签
 
 ## 4.1 获得DeepLink标签
-```
+```csharp
 /**
 * 获取deep link 数据
  * 需传入af sdk didReceiveConversionData()回调中获取到的ConversionData，以及成功和失败的callback
@@ -157,7 +157,7 @@ public static void getDeepLinkData(string afConversionData, Action<string> succe
 
 调用示例：
 
-```
+```csharp
 public void onGetDeepLinkData(string afconversionDataJson)
 {
 UPTraceApi.getDeepLinkData(afconversionDataJson,
@@ -180,7 +180,7 @@ Debug.Log("===> onDeepLinkDataFail Callback at: " + error);
 # 5. ABTest标签
 
 ## 5.1 获得 ABTest标签
-```
+```csharp
  /*
  * 获取 AB Test数据 
 */
@@ -195,7 +195,7 @@ public static void getABTestData(Action<string> success, Action<string> fail)
 | fail | 失败结果回调                  |
 
 调用示例：
-```
+```csharp
 #region get ab test data
 
 public void onGetABTestDataClick() {
@@ -256,7 +256,6 @@ Debug.Log("===> onABTestDataFail Callback at: " + error);
 
 - 上面示例即 A_a 组配置是 sta_Aa，sta_Aa 为约定下发配置信息，客户端/服务端 拿到相应的信息做好相应的hard code 来做映射，进行 / 下发相应游戏配置，
 - 以上面示例来说：用户命中了3个组别 A_a   A_a_a   B_b A_a ： 约定配置信息为 sta_Aa , 客户端/ 服务端需要根据约定好的 sta_Aa 对应的配置信息来对游戏进行控制
-
 
 
 

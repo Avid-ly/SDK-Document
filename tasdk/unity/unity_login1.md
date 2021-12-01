@@ -59,7 +59,7 @@ public static void logCommonLogin(string loginType, string playerId, string logi
 ```
 
 
-#4. 华为登录上报（支持 Android）
+# 4. 华为登录上报（支持 Android）
 有关华为 SDK 登录接口详情，请参考[此处](https://developer.huawei.com/consumer/cn/service/hms/catalog/HuaweiJointOperation.html?page=hmssdk_jointOper_api_reference_c9)。
 
 **方法一：** 无需对登录结果进行验签时，请调用此方法。

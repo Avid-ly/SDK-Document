@@ -60,9 +60,9 @@ bool isTraceSDKInited();
 ```
 
 # 3.2 设置 CUSTOMER_ID (仅Android设备)
-统计包中设置 customerId 参数，用于设置 AndroidId，此方法在发布 GooglePlay 以外的版本时才调用。
+统计包中设置 customerId 参数，用于设置 AndroidId，此方法在发布 **GooglePlay 以外**的版本时才调用。
 
-```java
+```csharp
 void setCustomerIdForAndroid(string customerId);
 ```
 > 请在 V3.1.1.5 以上版本中添加此方法，并在初始化 API 前调用。
@@ -101,7 +101,7 @@ public static string getOpenIdForAndroid()
 
  ```java
 UPTraceApi.getUserId();
-```
+ ```
 > 此方法第一次调用时候需要时间。
 
 
@@ -131,7 +131,6 @@ public static void enalbeDebugMode(bool isOpen);
 ``` csharp
 UPTraceApi.enalbeDebugMode(true);
 ```
-
 
 
 

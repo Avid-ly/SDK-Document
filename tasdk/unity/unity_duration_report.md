@@ -4,7 +4,7 @@
 &ensp;
 # 2. 初始化上报信息
 
-```java
+```csharp
 void initDurationReport(String serverName, String serverZone, String uId, String ggId);
 ```
 
@@ -22,7 +22,7 @@ void initDurationReport(String serverName, String serverZone, String uId, String
 
 请在游戏活跃时(前台)调用下面的方法,请不要频繁调用
 
-```java
+```csharp
 void becomeActive();
 ```
 
@@ -30,23 +30,11 @@ void becomeActive();
 
 游戏不活跃(后台)调用下面的方法,请不要频繁调用
 
-```java
+```csharp
 void resignActive();
 ```
-
 调用示例：
+
 ```csharp
-void OnApplicationPause(bool paused)
- {
-        if (paused)
-        {
-        //程序进入后台时执行
-	UPTraceApi.resignActive();
-        }
-        else
-        {
-         //程序从后台进入前台时
-	UPTraceApi.becomeActive();
-         }
-    }
+void resignActive();
 ```

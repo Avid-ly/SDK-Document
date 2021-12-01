@@ -1,8 +1,11 @@
-# 1. 导入 SDK 包
+# 1. 下载依赖包
 
  - 导入TASDK Unity Package
+
  - 右键Assets目录，选择External Dependency Manager - Android Resolver - Force Resolve, 下载依赖的jar包
- 
+
+![](../image/tasdk_unity_android_jar.jpg)
+
 # 2. 混淆配置
 
 如项目已开启混淆功能，请按照如下规则添加混淆配置。
