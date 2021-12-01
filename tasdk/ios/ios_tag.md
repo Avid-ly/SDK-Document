@@ -1,41 +1,52 @@
+# 1 用户标签介绍
 
-# 概述
+TASDK会提供出用户的各类标签，方便您针对不同的用户做不同的处理。
 
-如果游戏中需要获得用户标签，请使用以下 API 来进行获取。
+其中用户标签分为：
+
 - 推广用户标签
 - 付费用户标签
 - 广告用户标签
 - Deeplink标签
 - ABTest标签
 
-&ensp;
-# 1、推广用户标签
+对此我们分别提供了对应的获取方法，
 
+!> 您必须提前申请对应标签的权限，才能在TASDK中正确的获取到对应的标签。如您未申请权限，则无法获得标签。
 
-## 1.1 添加引用
+# 2 前提条件
+
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 完成项目设置
+- 请务必在获取用户标签之前初始化TASDK
 
 <br>
+
+# 3、获取用户标签
+
+添加头文件引用
 
 1). 添加AppsFlyer
 
 添加AppsFlyer到您的项目中，[AppsFlyer接入文档](https://support.appsflyer.com/hc/zh-cn/articles/207032066#%E9%9B%86%E6%88%90)
 
-<br>
-
 2). 引入TraceAnalysis
+
 在需要调用的地方引用一下代码
-```oc
+
+```
 #import <TraceAnalysisSDK/TraceAnalysis.h>;
 ```
 
-&ensp;
-## 1.2 获得推广用户标签
+## 3.1 获得推广用户标签
+
 请使用以下方法调用
 
-```oc
+```objective-c
 + (void)getConversionData:(NSDictionary *)conversionInfo completion:(void (^)(NSError *error, NSString *campaign))completionBlock;
 ```
-
 
 参数说明
 
@@ -48,7 +59,7 @@
 
 调用示例：
 
-```java
+```objective-c
 [TraceAnalysis getConversionData:conversionInfo completion:^(NSError *error, NSString *campaign) {
     
     if (error) {
@@ -60,8 +71,7 @@
 }];
 ```
 
-&ensp;
-## 1.3 最佳实践
+### 3.1.1 最佳实践
 
 
 ```Objective-C
@@ -112,19 +122,8 @@
 @end
 ```
 
-&ensp;
-# 2、付费用户标签
+## 3.2 获得付费用户标签
 
-&ensp;
-## 2.1 添加引用
-
-引入TraceAnalysis，在需要调用的地方引用一下代码
-```oc
-#import <TraceAnalysisSDK/TraceAnalysis.h>;
-```
-
-&ensp;
-## 2.2 获得付费用户标签
 请使用以下方法调用
 
 ```oc
@@ -153,29 +152,14 @@
     }
 }];
 ```
-&ensp;
 
-<br>
+## 3.3 获得广告用户标签
 
-&ensp;
-# 3、广告用户标签
-
-&ensp;
-## 3.1 添加引用
-
-引入TraceAnalysis，在需要调用的地方引用一下代码
-```oc
-#import <TraceAnalysisSDK/TraceAnalysis.h>;
-```
-
-&ensp;
-## 3.2 获得广告用户标签
 请使用以下方法调用
 
 ```oc
 + (void)getAdUserLayerWithCmpletion:(void (^)(NSError *error, NSString *adUserLayer))completionBlock;
 ```
-
 
 参数说明
 
@@ -197,23 +181,9 @@
         }
  }];
 ```
-&ensp;
 
-<br>
+## 3.4 获得Deeplink标签
 
-&ensp;
-# 4、Deeplink标签
-
-&ensp;
-## 4.1 添加引用
-
-引入TraceAnalysis，在需要调用的地方引用一下代码
-```oc
-#import <TraceAnalysisSDK/TraceAnalysis.h>;
-```
-
-&ensp;
-## 4.2 获得Deeplink标签
 请使用以下方法调用
 
 ```oc
@@ -248,11 +218,8 @@
         }
  }];
 ```
-&ensp;
 
-&ensp;
-## 4.3 最佳实践
-
+### 3.4.1 最佳实践
 
 ```Objective-C
 #import <TraceAnalysisSDK/TraceAnalysis.h>
@@ -302,23 +269,8 @@
 @end
 ```
 
-&ensp;
+## 3.5 获得ABTest标签
 
-<br>
-
-&ensp;
-# 5、ABTest标签
-
-&ensp;
-## 5.1 添加引用
-
-引入TraceAnalysis，在需要调用的地方引用一下代码
-```oc
-#import <TraceAnalysisSDK/TraceAnalysis.h>;
-```
-
-&ensp;
-## 5.2 获得ABTest标签
 请使用以下方法调用
 
 `特别说明`：需要在[init初始化](http://doc.avidly.com/docs/show/244)之后立刻调用
@@ -353,9 +305,9 @@
         }
  }];
 ```
-&ensp;
 
-## 5.3 ABTest标签说明
+
+### 3.5.1 ABTest标签说明
 
 `abTest`参数的类型为json字符串
 
@@ -392,3 +344,12 @@
 
 - 上面示例即 A_a 组配置是 sta_Aa，sta_Aa 为约定下发配置信息，客户端/服务端 拿到相应的信息做好相应的hard code 来做映射，进行 / 下发相应游戏配置，
 - 以上面示例来说：用户命中了3个组别 A_a   A_a_a   B_b A_a ： 约定配置信息为 sta_Aa , 客户端/ 服务端需要根据约定好的 sta_Aa 对应的配置信息来对游戏进行控制
+
+---
+
+恭喜您，您已经完成了TASDK的所有功能的集成！
+
+接下来，还有两项重要步骤请您耐心完成：
+
+- [隐私信息处理](/tasdk/ios/ios_pricacy.md)
+- [AppsFlyer处理](/tasdk/ios/ios_appsflyer.md)

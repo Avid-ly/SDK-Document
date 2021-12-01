@@ -3,7 +3,8 @@
 <center>TASDK接入文档</center>
 
 * iOS
-  * [工程引入](tasdk/ios/ios_start.md)
+  * [开始使用](tasdk/ios/ios_start.md)
+  * [项目设置](tasdk/ios/ios_setting.md)
   * [初始化](tasdk/ios/ios_init.md)
   * [事件打点](tasdk/ios/ios_log.md)
   * 登录上报

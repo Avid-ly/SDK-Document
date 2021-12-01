@@ -1,6 +1,6 @@
 # 1、 常见参数的说明和获取方式
 
-## 1）idfa广告标识符
+> idfa广告标识符
 
 获取方式
 
@@ -14,7 +14,7 @@ NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
 
 <br>
 
-## 2）idfv应用开发商标识符
+> idfv应用开发商标识符
 
 获取方式
 
@@ -22,7 +22,7 @@ NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
 NSString *idfv = [UIDevice currentDevice].identifierForVendor.UUIDString;
 ```
 
-## 3）统计包token
+> 统计包token
 
 获取方式
 
@@ -30,7 +30,7 @@ NSString *idfv = [UIDevice currentDevice].identifierForVendor.UUIDString;
 NSString *token = [TraceAnalysis staToken];
 ```
 
-## 4）统计包openId
+> 统计包openId
 
 获取方式
 
@@ -38,7 +38,9 @@ NSString *token = [TraceAnalysis staToken];
 NSString *openId = [TraceAnalysis getOpenId];
 ```
 
-## 5）appsFlyerUID AppsFlyer's internal id(unique for your app)
+> appsFlyerUID
+
+AppsFlyer's internal id(unique for your app)
 
 获取方式
 

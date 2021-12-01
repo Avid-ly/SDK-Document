@@ -1,4 +1,11 @@
-# 1 SDK初始化
+# 1 前提条件
+
+在您初始化MSSDK之前，您必须：
+
+- 按照我们的步骤将 MSSDK 集成到您的项目中。
+- 完成项目设置
+
+# 2 SDK初始化
 
 在要使用的类中引入头文件
 
@@ -26,7 +33,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 ```
 
-# 2 Debug模式
+# 3 Debug模式
 
 在接入过程中或后续的开发过程中，如果遇到问题想定位问题或想查看详细的日志，可以开启Debug模式
 
