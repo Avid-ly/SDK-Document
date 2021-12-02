@@ -62,8 +62,6 @@ void disableAccessPrivacyInformation();
 ```
 ![helper_gdpr](../image/helper_gdpr.png) 
 
-相关链接：
-[ 禁止获取设备信息][1]
 
 ### 3.5 Channel-发行检查
 - 如果您的发行渠道是Google play，会在channel下显示**Google Play**，可以无视下方代码。

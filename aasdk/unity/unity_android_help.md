@@ -26,11 +26,11 @@
 - 如不存在，请从unity安装目录中搜索AndroidManifest.xml文件并拷贝到Assets/Plugins/Android/中。
 
 ## 4.2 在`AndroidManifest`中添加 Faceboock 登录参数:
-
+请将 [**your_facebook_app_id** ]和 [**your_fb_login_protocol_scheme**] 替换为您Facebook后台的参数，如fb342166547143334
 ```
  <meta-data
     android:name="com.facebook.sdk.ApplicationId"
-    android:value="your_facebook_app_id" />
+    android:value="fb[your_facebook_app_id]" /> 
  <activity
     android:name="com.facebook.FacebookActivity"
     android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -42,14 +42,12 @@
            <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="\your_fb_login_protocol_scheme" />
+            <data android:scheme="fb[your_fb_login_protocol_scheme]" /> - 
        </intent-filter>
   </activity>
 ```
 
->因为unity对数字有长度限制。 其中fb_login_protocol_scheme必须前面带有"\",比如"\1712266368984820"
-> 授权登录 Faceboock 时需使用参数<code>facebook_app_id</code> 和 <code>fb_login_protocol_scheme</code>。
-> 
+
 > 详情请参考 [Facebook 登录配置](https://developers.facebook.com/docs/facebook-login/android/ "facebook docs")。
 
 ## 4.3 在`AndroidManifest`中添加 Google 登录参数:
@@ -115,5 +113,4 @@ android {
 ```
 <application android:name="android.support.multidex.MultiDexApplication"></application>
 ```
-
 
