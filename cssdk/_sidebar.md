@@ -16,7 +16,10 @@
 
 * Android
   * [工程引入](cssdk/android/android_start.md)
-  * [API介绍](cssdk/android/android_api.md)
+  * [初始化](cssdk/android/android_init.md)
+  * [客服与反馈](cssdk/android/android_feedback.md)
+  * [API概览](cssdk/android/android_api.md)
+  * [常见问题](cssdk/android/android_faq.md)
 
 * Unity
   * [Unity-iOS接入设置](cssdk/unity/unity_ios.md)
