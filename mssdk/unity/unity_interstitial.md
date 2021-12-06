@@ -2,7 +2,7 @@
 
 方法如下
 
-```
+```csharp
 /*
  * 设置插屏广告回调
  * @param didOpen 广告展示的回调方法
@@ -14,7 +14,7 @@ public static void setInterstitialCallback (Action<string, string> didOpen, Acti
 
 示例
 
-```
+```csharp
 MSSDK.setInterstitialCallback(	new System.Action<string, string>(onInterstitialDidOpen),
 								new System.Action<string, string>(onInterstitialDidClcik),
 								new System.Action<string, string>(onInterstitialDidClose));
@@ -41,7 +41,7 @@ private void onInterstitialDidClose(string cpAdUnitID, string message) {
 
 方法如下
 
-```
+```csharp
 /*
  * 判断插屏广告是否填充成功，此方法可用于检查广告是否可以展示
  * @param cpAdUnitID: 插屏广告位标识符
@@ -53,7 +53,7 @@ public static bool isInterstitialReady (string cpAdUnitID)
 
 示例
 
-```
+```csharp
 public void onBtnClick_isInterstitialReady () {
 	bool b = MSSDK.isInterstitialReady("sdada");
 	Debug.Log ("===> isInterstitialReady at: " + b);
@@ -66,7 +66,7 @@ public void onBtnClick_isInterstitialReady () {
 
 方法如下
 
-```
+```csharp
 /*
  * 用于展示插屏广告
  * @param cpAdUnitID: 插屏广告位标识符
@@ -77,13 +77,13 @@ public static void showInterstitialAd (string cpAdUnitID)
 
 示例
 
-```
+```csharp
 public void onBtnClick_showInterstitial () {
 	Debug.Log ("===> call onBtnClick_showInterstitial");
 	MSSDK.showInterstitialAd("sdada");
 }
 ```
 
-在播放之前需要完成代理的设置
+**在播放之前需要完成代理的设置**
 
 <br>

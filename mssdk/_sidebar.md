@@ -22,7 +22,6 @@
 	* [快速集成](mssdk/android/android_banner1.md)
 	* [自定义横幅广告](mssdk/android/android_banner2.md)
   * [GDPR调用](mssdk/android/android_gdpr.md)
-  * [安全设置](mssdk/android/android_security.md)
   * [常见问题](mssdk/android/android_faq.md)
   
 * Unity
@@ -32,6 +31,5 @@
   * [插屏广告](mssdk/unity/unity_interstitial.md)
   * [横幅广告](mssdk/unity/unity_banner.md)
   * [GDPR调用](mssdk/unity/unity_gdpr.md)
-  * [安全设置](mssdk/unity/unity_security.md)
   * [Facebook启用广告主追踪功能](mssdk/unity/unity_facebook.md)
   * [常见问题](mssdk/unity/unity_faq.md)

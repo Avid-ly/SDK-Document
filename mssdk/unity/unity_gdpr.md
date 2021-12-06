@@ -3,7 +3,7 @@
 
 方法如下
 
-```
+```csharp
 /*
  * 同意使用隐私信息
  */
@@ -12,7 +12,7 @@ public static void grantConsent ()
 
 示例
 
-```
+```csharp
 public void onBtnClick_grantConsent() {
 	Debug.Log ("===> call onBtnClick_grantConsent");
 	MSSDK.grantConsent();
@@ -23,7 +23,7 @@ public void onBtnClick_grantConsent() {
 
 方法如下
 
-```
+```csharp
 /*
  * 拒绝使用隐私信息
  */
@@ -32,7 +32,7 @@ public static void revokeConsent
 
 示例
 
-```
+```csharp
 public void onBtnClick_revokeConsent() {
 	Debug.Log ("===> call onBtnClick_revokeConsent");
 	MSSDK.revokeConsent();

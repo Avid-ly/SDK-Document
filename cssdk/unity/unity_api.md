@@ -1,4 +1,4 @@
-# 初始化CSSDK
+# 1.初始化CSSDK
 
 方法如下
 
@@ -15,7 +15,7 @@ public static void init (string productId)
 CSSDKApi.init("productid");
 ```
 
-# 展示客服页面
+# 2.展示客服页面
 
 方法如下
 
@@ -31,7 +31,7 @@ public static void show ()
 CSSDKApi.show();
 ```
 
-# 查询是否有新消息
+# 3.查询是否有新消息
 
 方法如下
 
@@ -56,7 +56,7 @@ private void onHaveNewMessageCallback(bool result,string msg) {
 }
 ```
 
-# 追加透传参数（如有需要可以使用）
+# 4.追加透传参数（如有需要可以使用）
 
 方法如下
 
@@ -75,7 +75,7 @@ public static void addExtraParam (Dictionary<string, string> dic)
  CSSDKApi.addExtraParam(dic);
 ```
 
-# 获取SDK版本号
+# 5.获取SDK版本号
 
 ###仅适用于ios
 

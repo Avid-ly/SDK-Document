@@ -2,12 +2,12 @@
 
 如果使用AppsFlyer，需要在统计包初始化成功后调用setAFId，可在初始化回调中或初始化后的某个时机调用；</br>
 API：
-```java
+```csharp
 // 将afid赋值给统计包
 UPTraceApi.setAFId(afid);
 ```
 调用示例：
-```java
+```csharp
 UPTraceApi.enalbeDebugMode(true);
 UPTraceApi.initTraceSDKWithCallback(PRODUCTID, CHANNELID, initSuccessCallback, initFailCallback);
 
@@ -31,15 +31,16 @@ public void initFailCallback(string message)
 
 
 API：
-```java
+```csharp
 // 将openId赋值给AppsFlyer
 AppsFlyer.setCustomerUserId(openId);
 ```
 调用示例：
-```java
+```csharp
 // 获取openId
 string openId=UPTraceApi.getOpenId();
 
 // 将openId赋值给AppsFlyer
 AppsFlyer.setCustomerUserId(openId);
 ```
+

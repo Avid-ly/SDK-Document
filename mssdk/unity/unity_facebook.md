@@ -39,10 +39,10 @@
 
 ## 4、最佳实现
 
-```
+```Objective-C
 // 在需要使用的地方引入以下头文件
-#import &lt;FBAudienceNetwork/FBAudienceNetwork.h>
-#import &lt;AppTrackingTransparency/AppTrackingTransparency.h>
+#import <FBAudienceNetwork/FBAudienceNetwork.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 // 当您获知<设备是否开启追踪>时，请调用以下方法
 if (@available(iOS 14, *)) {
