@@ -10,7 +10,7 @@
   * [插屏广告](mssdk/ios/ios_interstitial.md)
   * [横幅广告](mssdk/ios/ios_banner.md)
   * [GDPR](mssdk/ios/ios_gdpr.md)
-  * [API列表](mssdk/ios/ios_api.md)
+  * [API概览](mssdk/ios/ios_api.md)
   * [常见问题](mssdk/ios/ios_faq.md)
 
 * Android
@@ -25,11 +25,13 @@
   * [常见问题](mssdk/android/android_faq.md)
   
 * Unity
-  * [工程引入](mssdk/unity/unity_start.md)
+  * [开始使用](mssdk/unity/unity_start.md)
+  * 项目设置
+    * [Android设置](mssdk/unity/unity_android.md)
+    * [iOS设置](mssdk/unity/unity_ios.md)
   * [初始化](mssdk/unity/unity_init.md)
   * [激励视频](mssdk/unity/unity_reward.md)
   * [插屏广告](mssdk/unity/unity_interstitial.md)
   * [横幅广告](mssdk/unity/unity_banner.md)
   * [GDPR调用](mssdk/unity/unity_gdpr.md)
-  * [Facebook启用广告主追踪功能](mssdk/unity/unity_facebook.md)
   * [常见问题](mssdk/unity/unity_faq.md)

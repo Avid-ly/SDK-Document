@@ -15,6 +15,7 @@
   * [用户标签](tasdk/ios/ios_tag.md)
   * [隐私信息处理](tasdk/ios/ios_pricacy.md)
   * [AppsFlyer处理](tasdk/ios/ios_appsflyer.md)
+  * [API概览](tasdk/ios/ios_api.md)
   * [常见问题](tasdk/ios/ios_faq.md)
 
 * Android
@@ -31,10 +32,11 @@
   * [AppsFlyer处理](tasdk/android/android_appsflyer.md)
   * [常见问题](tasdk/android/android_faq.md)
 * Unity
-  * [工程引入](tasdk/unity/unity_start.md)
-  * [Andorid设置](tasdk/unity/unity_android.md)
-  * [iOS设置](tasdk/unity/unity_ios.md)
-  * [API介绍](tasdk/unity/unity_api.md)
+  * [开始使用 ](tasdk/unity/unity_start.md)
+  * 项目设置
+    * [Andorid设置](tasdk/unity/unity_android.md)
+    * [iOS设置](tasdk/unity/unity_ios.md)
+  * [初始化](tasdk/unity/unity_init.md)
   * [事件打点](tasdk/unity/unity_log.md)
   * [登录上报](tasdk/unity/unity_login.md)
   	* [未使用AASDK](tasdk/unity/unity_login1.md)
@@ -44,6 +46,8 @@
   * [用户标签](tasdk/unity/unity_tag.md)
   * [测试套件](tasdk/unity/unity_test_help.md)
   * [AppsFlyer处理](tasdk/unity/unity_appsflyer.md)
+  * [隐私信息处理](tasdk/unity/unity_gdpr.md)
+  * [常见问题](tasdk/unity/unity_api.md)
 
 * [API列表](tasdk/api.md)
 * [S2S 服务端事件上报帮助文档](tasdk/s2s.md)

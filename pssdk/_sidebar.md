@@ -3,9 +3,10 @@
 <center>PSSDK接入文档</center>
 
 * iOS
-  * [工程引入](pssdk/ios/ios_start.md)
-  * [API介绍](pssdk/ios/ios_api.md)
-  * [最佳实现](pssdk/ios/ios_best.md)
+  * [开始使用](pssdk/ios/ios_start.md)
+  * [项目设置](pssdk/ios/ios_setting.md)
+  * [请求授权](pssdk/ios/ios_request.md)
+  * [API概览](pssdk/ios/ios_api.md)
   * [常见问题](pssdk/ios/ios_faq.md)
 
 * Android
