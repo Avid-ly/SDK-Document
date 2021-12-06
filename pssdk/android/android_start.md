@@ -1,10 +1,14 @@
 
 # 1.前提条件
-前提条件：应用全球发布，包括欧盟北美。
-&ensp;
+
+- 确保您安装了Android Studio 3.2 或更高版本
+- 确保您使用真实的Android设备，而不是模拟器进行开发和测试
+- 确保您能访问诸如Facebook，Google等网址
+- 确保您的发行地区为全球，包括欧盟和南美
+
 # 2.工程引入
 
-1）在module的build.gradle中添加pssdk
+### 2.1  在module的build.gradle中添加pssdk
 
 ```groovy
 dependencies {
@@ -12,26 +16,7 @@ dependencies {
 }
 ```
 
-!>`请注意maven 的最新仓库地址是否与您使用的一致，若不一致会出现类似下面这种找不到库的报错`</br>
-`<Build: failed at`</br>
-`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
-
-1.1 追加PSSDK仓库地址
-```groovy
-android {
-    defaultConfig {
-        //...
-    }
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-    maven { url "http://bx-mvn.dataverse.cn:58081/repository/maven-releases/"}
-}
-```
-1.2 追加PSSDK仓库地址 仅适用于 Android Studio 2020.x.x 及以上 (可选)
-
-
+### 2.2 追加PSSDK仓库地址
 ```groovy
 android {
     defaultConfig {
@@ -44,10 +29,7 @@ repositories {
     maven { url "https://mvn-bx.dataverse.cn/repository/maven-releases/"}
 }
 ```
-
-
-
-2）引入support库
+### 2.3 引入support库
 
 ```
 dependencies {
@@ -80,3 +62,9 @@ PSSDK 依赖如下权限：
 &ensp;
 # 5. Demo 工程
 为更好的了解 PSSDK 的导入和使用，请参考 [Demo工程](https://github.com/Avid-ly/Android-PSSDK-Demo "Demo工程")。
+# 6 常见编译问题
+### 6.1 Could not HEAD...
+Q:`<Build: failed at`</br>
+`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
+
+A:此错误表示您没有获取到本SDK的仓库地址，请将本文档中的maven仓库地址引入到您的项目中
