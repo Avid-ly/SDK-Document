@@ -1,13 +1,30 @@
 
-# 1. 概述
+# 1 用户标签介绍
 
-用户标签分为推广用户标签,付费用户标签,用户广告标签。
-如果游戏中需要获得用户标签，请使用以下 API 来进行获取。
-&ensp;
+TASDK会提供出用户的各类标签，方便您针对不同的用户做不同的处理。
 
-# 2. 获得推广用户标签
+其中用户标签分为：
 
-## 2.1 添加AppsFlyer
+- 推广用户标签
+- 付费用户标签
+- 广告用户标签
+- Deeplink标签
+- ABTest标签
+
+对此我们分别提供了对应的获取方法，
+
+!> 您必须提前申请对应标签的权限，才能在TASDK中正确的获取到对应的标签。如您未申请权限，则无法获得标签。
+
+# 2 前提条件
+
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 请务必在获取用户标签之前初始化TASDK
+
+# 3 获得推广用户标签
+
+## 3.1 添加AppsFlyer
 
 如果您已添加AppsFlyer到您的项目中，请忽略此步骤
 
@@ -16,23 +33,18 @@ dependencies {
       implementation 'com.appsflyer:af-android-sdk:5.2.0'
 }
 ```
-## 2.2 引入ALYAnalysis
-所有方法均以 static 定义在 `ALYAnalysis` 类中，请将 **ALYAnalysis** 引用至 Java 代码中。
-```java
-import com.aly.sdk.ALYAnalysis;
-```
-&ensp;
-## 2.3 获得用户标签
+
+## 3.2 获得用户标签
 请从下方API中任选其一进行调用。
 > 请在初始化成功之后调用
 
-#### 2.3.1  参数类型是Map
+#### 3.2.1  参数类型是Map
 
 ```java
 getConversionData(Map<String, Object> conversionData, AFConversionDataResultListener afConversionDataResultListener) ;
 ```
 
-#### 2.3.2  参数类型是String
+#### 3.2.2  参数类型是String
 
 ```java
 getConversionData(String conversionData, AFConversionDataResultListener afConversionDataResultListener) ;
@@ -62,8 +74,7 @@ getConversionData(String conversionData, AFConversionDataResultListener afConver
                 });
             }
 ```
-&ensp;
-## 2.4 最佳实践
+## 3.3 最佳实践
 
 ```java
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,9 +121,9 @@ getConversionData(String conversionData, AFConversionDataResultListener afConver
 
 }
 ```
-# 3. 获得付费用户标签
+# 4 获得付费用户标签
 
-### 3.1 调用API
+### 4.1 调用API
 
 > 请在初始化成功之后调用
 
@@ -144,9 +155,9 @@ ALYAnalysis.getPayUserLayerData(new PayUserLayerDataListener() {
         });
 ```
 
-# 4. 获得用户广告标签
+# 5 获得用户广告标签
 
-### 4.1 调用API 
+### 5.1 调用API 
 
 > 请在初始化成功之后调用
 
@@ -177,9 +188,9 @@ ALYAnalysis.getUserAdLayerData(new UserAdLayerDataListener() {
             }
         });
 ```
-# 5. 获得DeepLink数据
+# 6 获得DeepLink数据
 
-### 5.1 调用API 
+### 6.1 调用API 
 
 > 请在初始化成功之后调用,以下方法任选其一
 
@@ -233,9 +244,9 @@ public static void getDLData(Map<String, Object> conversionData, UserDlLayerData
             }
     };
 ```
-# 6. 获得ABTest数据
+# 7 获得ABTest数据
 
-### 6.1 调用API
+### 7.1 调用API
 
 > 请在初始化成功之后调用
 
@@ -269,3 +280,9 @@ public static void getUserABTestData(UserAbTestDataListener listener);
     }
 	
 ```
+恭喜您，您已经完成了TASDK的所有功能的集成！
+
+接下来，还有两项重要步骤请您耐心完成：
+
+- [测试套件](/tasdk/android/android_test_help.md)
+- [AppsFlyer处理](/tasdk/android/android_appsflyer.md)

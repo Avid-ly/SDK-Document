@@ -1,3 +1,4 @@
+
 # 1. 概述
 由于登录环节在游戏或应用中至关重要，因此我们单独提供了登录事件方法，以便快速统计登录事件。
 
@@ -7,14 +8,24 @@
 > &bull;&ensp;如游戏中同时包含帐号 ID 和角色 ID，则 playerId 参数取“帐号 ID”值。</br>
 > &bull;&ensp;如游戏中只包含角色 ID（或游戏 ID），则 playerId 参数取“角色 ID（或游戏 ID）”值。<br>
 
-&ensp;
-# 2. 添加引用
-所有方法都以 static 定义在`ALYLogin`类中，请将 **ALYLogin** 引用到 Java 代码中。
-```java
-import com.aly.account.ALYLogin;
-```
-&ensp;
-# 3. 游客登录上报
+# 2 前提条件
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 请务必在登录上报之前初始化TASDK
+- 确保您未使用AASDK，如使用AASDK，请参考[使用AASDK登录上报](/tasdk/android/android_login2.md)
+
+# 3 登录上报
+
+如果您未使用AASDK登录，而是自行接入的登录，我们为您提供了以下登录上报方法：
+
+- 游客登录 上报
+- Facebook登录 上报
+- 华为登录 上报
+- 通用登录 上报
+
+
+# 3.1 游客登录上报
 
 ```java
 void guestLogin(String playerId);
@@ -34,7 +45,7 @@ ALYLogin.guestLogin("playerId");
 ```
 
 &ensp;
-# 4. Facebook登录上报
+# 3.2 Facebook登录上报
 
 ```java
 void facebookLogin(String playerId, String openId, String openToken);
@@ -55,7 +66,7 @@ ALYLogin.facebookLogin("playerId", "openId", "openToken");
 ```
 &ensp;
 
-# 5. 华为登录上报
+# 3.3 华为登录上报
 有关华为 SDK 登录接口详情，请参考[此处](https://developer.huawei.com/consumer/cn/service/hms/catalog/HuaweiJointOperation.html?page=hmssdk_jointOper_api_reference_c9)。
 
 **方法一：** 无需对登录结果进行验签时，请调用此方法。
@@ -86,15 +97,29 @@ public static void huaWeiLogin(String appId, String cpId, String gameServerId, S
 ```
 
 &ensp;
-# 6. 通用登录上报
+# 3.4 通用登录上报
 > 仅当登录上报类型不在上述范围内时，可调用此方法完成登录上报。
 
 调用此方法时，为确保我们服务器能正确识别并接受各参数，请事先与我们沟通参数内容与编码规则。
+
 ```java
 /**
- @param type：预先定义的登录平台名称，仅包括'facebook','huawei',''googleplay","twitter","instagram","unknow"。
+ @param type：预先定义的登录平台名称，仅包括"facebook","huawei","googleplay","twitter","instagram",”email“,"unknow"。
  @param playerId：游戏用户 ID，同guestLogin()中的playerId参数。
  @param openToken：扩展的登录凭证，具体取值因平台而异。
  */
+
 public static void commonLogin(final String type, final String playerId, final String openToken)；
 ```
+
+
+
+
+到此，您已经完成了登录上报的集成。
+
+接下来，您可以根据自己的需求，选取对应的功能并集成到项目里：
+
+- [支付上报](/tasdk/android/android_iap.md)
+- [在线用户时长上报](/tasdk/android/android_duration_report.md)
+- [用户标签](/tasdk/android/android_tag.md)
+

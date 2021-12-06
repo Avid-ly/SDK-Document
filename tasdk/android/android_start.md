@@ -1,5 +1,11 @@
-# 1. 导入 SDK 包
+# 1.前提条件
 
+- 确保您安装了最新的 Android studio 3.2 及更高版本
+- 确保您使用真实的Android设备，而不是模拟器进行开发和测试
+- 确保您能访问诸如Facebook，Google等网址
+
+
+# 2. 安装SDK
 ## 1.1 AndroidStudio 工程
 
 1) 将 `analysissdk`添加至`build.gradle`的`dependencies`标签中。
@@ -7,36 +13,15 @@
 ```groovy
 
 dependencies {
-   // 引用统计包
-  implementation 'com.aly.sdk:tasdk:4.1.0.5'
-  //引用依赖库
- implementation 'com.google.android.gms:play-services-base:17.3.0’
+    // 引用统计包
+    implementation 'com.aly.sdk:tasdk:4.1.0.7'
+    //引用依赖库
+    implementation 'com.google.android.gms:play-services-base:17.3.0’
 }
 ```
-
->**`请注意maven 的最新仓库地址是否与您使用的一致，若不一致会出现类似下面这种找不到库的报错`**</br>
-`<Build: failed at`</br>
-`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
 
 
 （1）追加TASDK仓库地址
-```groovy
-android {
-    defaultConfig {
-        //...
-    }
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-    maven { url "http://bx-mvn.dataverse.cn:58081/repository/maven-releases/"}
-}
-
-
-
-```
-（2） 追加TASDK仓库地址 仅适用于 Android Studio 2020.x.x 及以上 (可选)
-
 
 ```groovy
 android {
@@ -52,16 +37,15 @@ repositories {
 
 ```
 
-&ensp;
 
-# 2. 游戏安装数配置
+# 3. 游戏安装数配置
 为正确统计游戏的安装数，统计包中依赖`installreferrer`组件。
 
 ```groovy
 implementation 'com.android.installreferrer:installreferrer:1.1'
 ```
 
-# 3. 混淆配置
+# 4. 混淆配置
 
 如项目已开启混淆功能，请按照如下规则添加混淆配置。
 
@@ -105,9 +89,18 @@ implementation 'com.android.installreferrer:installreferrer:1.1'
 -keep class com.aly.sdk.ext.** {*;}
 -keep interface com.aly.sdk.ext.** {*;}
 ```
-&ensp;
 
-# 4. Demo
+# 5. Demo
 为帮助您更好的了解SDK的接入以及使用，我们为您提供了简单的Demo工程，您可以根据您的IDE使用情况下载对应的工程。
 
 [Android Studio](https://github.com/Avid-ly/Android-AnalysisDemo "Demo工程")
+
+# 6 常见编译问题
+
+### 6.1 Could not HEAD...
+Q:`<Build: failed at`</br>
+`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
+
+A:此错误表示您没有获取到本SDK的仓库地址，请将本文档中的maven仓库地址引入到您的项目中
+
+
