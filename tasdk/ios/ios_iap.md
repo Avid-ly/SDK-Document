@@ -80,9 +80,28 @@
 
 <br>
 
-到此，您已经完成了支付上报的集成。
+到此，您已经完成了支付上报的集成。如您对支付上报有疑问，请参考本页最后的常见问题。
 
 接下来，您可以根据自己的需求，选取对应的功能并集成到项目里：
 
 - [在线用户时长上报](/tasdk/ios/ios_duration_report.md)
 - [用户标签](/tasdk/ios/ios_tag.md)
+
+
+# 4 常见问题
+
+- 游戏没有没有用户系统，游戏用户ID如何处理
+- 支付单据获取的时机
+- 支付单据必须进行base64编码吗
+
+> <span id="iap_faq_1">游戏没有没有用户系统，游戏用户ID如何处理</span>
+
+如果您的游戏没有用户系统，游戏用户ID（playerId）可以用idfa或统计包Token，统计包OpenId等能识别用户的唯一标识代替。
+
+> <span id="iap_faq_1">支付单据获取的时机</span>
+
+支付单据可以在`-(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transaction`方法调用的时候，即支付完成的回调中，来获取支付单据。
+
+> <span id="iap_faq_1">支付单据必须进行base64编码吗</span>
+
+Apple示例代码需要单据进行base64编码才能发送到Apple服务器校验单据的合法性。
