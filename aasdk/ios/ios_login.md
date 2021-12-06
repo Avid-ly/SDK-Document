@@ -180,5 +180,31 @@ BOOL visible = YES;
 > - 如本次回调中的gameGuestId与上次回调中的gameGuestId有变化，说明用户切换了账号
 
 
+</br>
+
+如果您对登录流程有任何疑问，请参考文档最后的常见使用问题。
+
 恭喜您，已经完成了登录相关操作，接下来让我们去设置[用户中心](/aasdk/ios/ios_usercenter.md)吧
 
+# 使用问题
+
+- 如何获取用户的登录方式
+- 如何获取用户的标识
+- 如何判断用户切换了账户
+- 我需要缓存用户数据吗
+
+> <span id="login_fap_1">如何获取用户的登录方式</span>
+
+首先您需要注册登录回调，在登录回调中AASAccountLoginModel对象的loginMode属性即为用户的登录方式，详细内容请查看API概览
+
+> <span id="login_fap_2">如何获取用户的标识</span>
+
+GGID为用户唯一标识，您可以调用`+ (NSString *)getGGID;`方法，获取用户唯一标识。当GGID为空值时，标识当前用户未登录。
+
+> <span id="login_fap_3">如何判断用户切换了账户</span>
+
+首先您需要注册登录回调，在登录回调中AASAccountLoginModel对象的gameGuestId属性为用户唯一标识，您需要自行记录上一次的用户唯一标识与本次回调的唯一标识做对比，如不一致， 代表用户切换了账号
+
+> <span id="login_fap_4">我需要缓存用户数据吗</span>
+
+如您需要使用GGID来做业务逻辑，建议您缓存GGID

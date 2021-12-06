@@ -15,6 +15,7 @@
   * [用户标签](tasdk/ios/ios_tag.md)
   * [隐私信息处理](tasdk/ios/ios_pricacy.md)
   * [AppsFlyer处理](tasdk/ios/ios_appsflyer.md)
+  * [API概览](tasdk/ios/ios_api.md)
   * [常见问题](tasdk/ios/ios_faq.md)
 
 * Android

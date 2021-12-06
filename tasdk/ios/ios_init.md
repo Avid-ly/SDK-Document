@@ -61,3 +61,55 @@ TASDK初始化的主要不在如下所示：
 - [支付上报](/tasdk/ios/ios_iap.md)
 - [在线用户时长上报](/tasdk/ios/ios_duration_report.md)
 - [用户标签](/tasdk/ios/ios_tag.md)
+
+此外，在开发的过程中，如果您有获取TASDK一些参数的需求，可以参考下边的常见问题
+
+# 3 常见参数的说明和获取方式
+
+> <span id="init_faq_1">idfa广告标识符<span>
+
+获取方式
+
+```
+#import <AdSupport/AdSupport.h>
+
+NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+```
+
+提示：需要在用户授权ATT或LAT的情况下才能够获取到
+
+<br>
+
+> <span id="init_faq_2">idfv应用开发商标识符<span>
+
+获取方式
+
+```
+NSString *idfv = [UIDevice currentDevice].identifierForVendor.UUIDString;
+```
+
+> <span id="init_faq_3">统计包token<span>
+
+获取方式
+
+```
+NSString *token = [TraceAnalysis staToken];
+```
+
+> <span id="init_faq_4">统计包openId<span>
+
+获取方式
+
+```
+NSString *openId = [TraceAnalysis getOpenId];
+```
+
+> <span id="init_faq_5">appsFlyerUID<span>
+
+AppsFlyer's internal id(unique for your app)
+
+获取方式
+
+```
+NSString *appsFlyerUID = [[AppsFlyerTracker sharedTracker] getAppsFlyerUID];
+```

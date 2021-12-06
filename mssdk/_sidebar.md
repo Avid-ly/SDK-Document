@@ -10,7 +10,7 @@
   * [插屏广告](mssdk/ios/ios_interstitial.md)
   * [横幅广告](mssdk/ios/ios_banner.md)
   * [GDPR](mssdk/ios/ios_gdpr.md)
-  * [API列表](mssdk/ios/ios_api.md)
+  * [API概览](mssdk/ios/ios_api.md)
   * [常见问题](mssdk/ios/ios_faq.md)
 
 * Android
