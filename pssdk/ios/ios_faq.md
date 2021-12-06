@@ -9,9 +9,9 @@
 
 # 2 使用问题
 
-- [PSSDK都包含哪些隐私政策](pssdk/ios/ios_request/request_faq_1)
-- [授权状态都有哪些](pssdk/ios/ios_request/request_faq_2)
-- [是否需要每次启动App都进行请求隐私政策](pssdk/ios/ios_request/request_faq_3)
-- [碰到异常应如何处理](pssdk/ios/ios_request/request_faq_4)
-- [弹窗或文案渲染有问题是什么原因](pssdk/ios/ios_request/request_faq_5)
-- [请求授权的时机](pssdk/ios/ios_request/request_faq_6)
+- [PSSDK都包含哪些隐私政策](pssdk/ios/ios_request?id=request_faq_1)
+- [授权状态都有哪些](pssdk/ios/ios_request?id=request_faq_2)
+- [是否需要每次启动App都进行请求隐私政策](pssdk/ios/ios_request?id=request_faq_3)
+- [碰到异常应如何处理](pssdk/ios/ios_request?id=request_faq_4)
+- [弹窗或文案渲染有问题是什么原因](pssdk/ios/ios_request?id=request_faq_5)
+- [请求授权的时机](pssdk/ios/ios_request?id=request_faq_6)
