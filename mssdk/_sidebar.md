@@ -22,6 +22,7 @@
 	* [快速集成](mssdk/android/android_banner1.md)
 	* [自定义横幅广告](mssdk/android/android_banner2.md)
   * [GDPR调用](mssdk/android/android_gdpr.md)
+  * [API概览](mssdk/android/android_api.md)
   * [常见问题](mssdk/android/android_faq.md)
   
 * Unity
