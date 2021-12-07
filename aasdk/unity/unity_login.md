@@ -1,5 +1,12 @@
+# 1 前提条件
+在您使用AASDK进行登录之前，您必须：
 
-# 1. 用户登录
+- 按照我们的步骤将 AASDK 集成到您的项目中。
+- 完成项目设置
+- 完成SDK初始化
+
+
+# 2. 用户登录
 ```csharp
 using AASDK;
 void accountLogin (）
@@ -11,10 +18,7 @@ void accountLogin (）
 AASDKApi.accountLogin();
 ```
 
-
-
-
-# 2. 获取登录回调(GGID)
+# 3. 获取登录回调(GGID)
 >请在accountLogin之前调用
 
 ```csharp
@@ -46,7 +50,7 @@ AASDKApi.accountLogin();
 	}
 ```
 
-# 3. 获取登录回调(Token)
+# 4. 获取登录回调(Token)
 >请在accountLogin之前调用
 
 ```csharp
@@ -78,7 +82,7 @@ AASDKApi.accountLogin();
     }
 ```
 
-# 4. 隐藏与显示Google Play登录入口
+# 5. 隐藏与显示Google Play登录入口
 >请在accountLogin之前调用
 
 ```csharp
@@ -96,7 +100,7 @@ AASDKApi.accountLogin();
  AASDKApi.setGPLoginVisible(true);
 ```
 
-# 5. 隐藏与显示自动登录动画
+# 6. 隐藏与显示自动登录动画
 >请在accountLogin之前调用
 
 ```csharp
@@ -114,7 +118,7 @@ AASDKApi.accountLogin();
 // 默认是隐藏登录动画的，如果要显示请设置为true
  AASDKApi.setReloginViewVisible(true);
 ```
-# 6.  获取 Facebook Token
+# 7.  获取 Facebook Token
 ```csharp
 void getFacebookLoginedToken (）
 ```
@@ -125,7 +129,7 @@ void getFacebookLoginedToken (）
 AASDKApi.getFacebookLoginedToken();
 ```
 
-# 7.  获取玩家GGID
+# 8.  获取玩家GGID
 ```csharp
 void getLoginedGGid (）
 ```
@@ -135,7 +139,7 @@ void getLoginedGGid (）
 ```csharp
 AASDKApi.getLoginedGGid();
 ```
-# 8.常见问题
+# 9.常见问题
 ><span id="aasdk_unity_faq3">AppsFlyer Unity插件导致Facebook登录没有回调的问题</span>
 
 解决方案

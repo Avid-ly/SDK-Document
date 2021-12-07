@@ -1,10 +1,15 @@
-# 1. 引用 SDK
+# 1 前提条件
+在您使用AASDK进行登录之前，您必须：
+
+- 按照我们的步骤将 AASDK 集成到您的项目中。
+
+# 2. 引用 SDK
 在 *.cs 文件中，引用有关AASDK 的命名空间。
 ```csharp
 using AASDK;
 ```
 
-# 2. 初始化 AASDK
+# 3. 初始化 AASDK
 ```csharp
 void initSDK (string productId）
 ```

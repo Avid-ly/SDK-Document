@@ -47,7 +47,8 @@
   * [测试套件](tasdk/unity/unity_test_help.md)
   * [AppsFlyer处理](tasdk/unity/unity_appsflyer.md)
   * [隐私信息处理](tasdk/unity/unity_gdpr.md)
-  * [常见问题](tasdk/unity/unity_api.md)
+  * [API概述](tasdk/unity/unity_api.md)
+  * [常见问题](tasdk/unity/unity_faq.md)
 
 * [API列表](tasdk/api.md)
 * [S2S 服务端事件上报帮助文档](tasdk/s2s.md)

@@ -22,8 +22,15 @@
   * [常见问题](cssdk/android/android_faq.md)
 
 * Unity
-  * [Unity-iOS接入设置](cssdk/unity/unity_ios.md)
-  * [Unity-Android接入设置](cssdk/unity/unity_android.md)
-  * [API介绍](cssdk/unity/unity_api.md)
- 
+  * [开始使用](cssdk/unity/unity_start.md)
+  * 项目设置
+    * [Unity-iOS接入设置](cssdk/unity/unity_ios.md)
+    * [Unity-Android接入设置](cssdk/unity/unity_android.md)
+  * [初始化](cssdk/unity/unity_init.md)
+  * [客服与反馈](cssdk/unity/unity_feedback.md)
+  * [API概览](cssdk/unity/unity_api.md)
+  * [常见问题](cssdk/unity/unity_faq.md)
+
+  
+  
 * [管理后台操作说明](cssdk/other/manager.md)

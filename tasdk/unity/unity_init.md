@@ -1,10 +1,17 @@
-# 1. 引用 SDK
+# 1.前提条件
+
+在您初始化TASDK之前，您必须：
+
+- 按照我们的步骤将 TASDK 集成到您的项目中。
+- 完成项目设置
+
+# 2. 引用 SDK
 在 *.cs 文件中，引用有关统计 SDK 的命名空间。
 ```csharp
 using UPTrace;
 ```
 &ensp;
-# 2. 初始化 SDK
+# 3. 初始化 SDK
 
 ```csharp
 public static void initTraceSDKWithCallback(string productId, string channelId, Action<string> success, Action<string> fail)
@@ -52,7 +59,7 @@ public void initFailCallback(string message)
 &ensp;
 
 
-# 3. Debug模式
+# 4. Debug模式
 用于打印上报的信息，请在发布环境中设置为false
 >请在初始化之前调用
 
@@ -65,7 +72,7 @@ public static void enalbeDebugMode(bool isOpen);
 UPTraceApi.enalbeDebugMode(true);
 ```
 
-# 4.设置 CUSTOMER_ID (仅Android设备)
+# 5.设置 CUSTOMER_ID (仅Android设备)
 统计包中设置 customerId 参数，用于设置 AndroidId，此方法在发布 **GooglePlay 以外**的版本时才调用。
 
 ```csharp
