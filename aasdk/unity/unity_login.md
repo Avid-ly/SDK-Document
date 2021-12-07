@@ -1,28 +1,7 @@
-# 1. 引用 SDK
-在 *.cs 文件中，引用有关AASDK 的命名空间。
+
+# 1. 用户登录
 ```csharp
 using AASDK;
-```
-
-# 2. 初始化 AASDK
-```csharp
-void initSDK (string productId）
-```
-参数说明：
-
-|参数名|说明|
-|:----  |-----   |
-|productId |产品 ID，须正确指定且不能为空。   |
-
-调用示例：
-
-```csharp
-private const string PRODUCTID = "999999";
-AASDKApi.initSDK (PRODUCTID);
-```
-
-# 3. 用户登录
-```csharp
 void accountLogin (）
 ```
 
@@ -32,39 +11,10 @@ void accountLogin (）
 AASDKApi.accountLogin();
 ```
 
-# 4. 进入用户中心
-```csharp
-void showUserManagerUI (）
-```
 
-调用示例：
 
-```csharp
-AASDKApi.showUserManagerUI();
-```
-# 5.  获取 Facebook Token
-```csharp
-void getFacebookLoginedToken (）
-```
 
-调用示例：
-
-```csharp
-AASDKApi.getFacebookLoginedToken();
-```
-
-# 6.  获取玩家GGID
-```csharp
-void getLoginedGGid (）
-```
-
-调用示例：
-
-```csharp
-AASDKApi.getLoginedGGid();
-```
-
-# 7. 获取登录回调(GGID)
+# 2. 获取登录回调(GGID)
 >请在accountLogin之前调用
 
 ```csharp
@@ -96,7 +46,7 @@ AASDKApi.getLoginedGGid();
 	}
 ```
 
-# 8. 获取登录回调(Token)
+# 3. 获取登录回调(Token)
 >请在accountLogin之前调用
 
 ```csharp
@@ -128,7 +78,7 @@ AASDKApi.getLoginedGGid();
     }
 ```
 
-# 9. 隐藏与显示Google Play登录入口
+# 4. 隐藏与显示Google Play登录入口
 >请在accountLogin之前调用
 
 ```csharp
@@ -146,7 +96,7 @@ AASDKApi.getLoginedGGid();
  AASDKApi.setGPLoginVisible(true);
 ```
 
-# 10. 隐藏与显示自动登录动画
+# 5. 隐藏与显示自动登录动画
 >请在accountLogin之前调用
 
 ```csharp
@@ -164,5 +114,30 @@ AASDKApi.getLoginedGGid();
 // 默认是隐藏登录动画的，如果要显示请设置为true
  AASDKApi.setReloginViewVisible(true);
 ```
+# 6.  获取 Facebook Token
+```csharp
+void getFacebookLoginedToken (）
+```
 
+调用示例：
 
+```csharp
+AASDKApi.getFacebookLoginedToken();
+```
+
+# 7.  获取玩家GGID
+```csharp
+void getLoginedGGid (）
+```
+
+调用示例：
+
+```csharp
+AASDKApi.getLoginedGGid();
+```
+# 8.常见问题
+><span id="aasdk_unity_faq3">AppsFlyer Unity插件导致Facebook登录没有回调的问题</span>
+
+解决方案
+
+[修复Unity IDE中同时接入AF+FB导致FB登录完成回调不响应的问题](https://github.com/Avid-ly/AASDK-UnityPackage/blob/master/%E4%BF%AE%E5%A4%8DAF%2BFB%E5%AF%BC%E8%87%B4FB%E7%99%BB%E5%BD%95%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83%E4%B8%8D%E5%93%8D%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98.md)
