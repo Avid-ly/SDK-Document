@@ -1,5 +1,13 @@
-# SDK初始化
-请在主Activity中尽早初始化广告SDK。
+
+# 1 前提条件
+
+- 确保您安装了Android Studio 3.2 或更高版本
+- 确保您使用真实的Android设备，而不是模拟器进行开发和测试
+- 确保您能访问诸如Facebook，Google等网址
+
+
+# 2 SDK初始化
+>请在主Activity中尽早初始化广告SDK。
 
 ```java
  MsSDK.init(Activity context,MsSdkInitializationListener Listener);
@@ -15,13 +23,13 @@ MsSDK.init(this, new MsSdkInitializationListener() {
 });
 ```
 
-# 开启 debug
-为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭
+# 3 开启 debug
+>为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭
 ```java
-MsSDK.setDebuggable(true);
+MsSDK.setDebuggable(boolean isOpen);
 ```
-# 为生命周期注册回调
-为了正常加载和展示广告，请在游戏的主activity中注册相应回调。
+# 4 注册生命周期回调
+>为了正常加载和展示广告，请在游戏的主activity中注册相应回调。
 ```java
 public  class MainActivity extends AppCompatActivity {
     @Override

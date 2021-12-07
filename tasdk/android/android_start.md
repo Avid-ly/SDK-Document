@@ -70,7 +70,7 @@ implementation 'com.android.installreferrer:installreferrer:1.1'
 -keep class com.aly.zflog.* {public *;}
 -keep class com.aly.sdk.** {*;}
 -keep class com.statistics.channel.ChannelProvider {public *;}
--keep class com.aly.unity.UPTraceProxy {public static <methods>;}
+-keep class com.aly.unity.UPTraceProxy {public static *;}
 
 -keep class com.aly.analysis.sdk.api.ALYSDKConstant {public static boolean sDebugLog;}
 -keep class com.aly.analysis.utils.ALYSDCardUtil {*** getExternalSDPath(***);}

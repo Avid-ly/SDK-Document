@@ -1,8 +1,13 @@
 
-有关Studio的帮助，本文将以四个要点讲解如下。
+# 1 前提条件
+
+- 确保您安装了Android Studio 3.2 或更高版本
+- 确保您使用真实的Android设备，而不是模拟器进行开发和测试
+- 确保您能访问诸如Facebook，Google等网址
 
 
-#  一、导入MSSDK主包
+#  2 安装SDK
+## 2.1 导入MSSDK主包
 
 将MSSDK添加到build.gradle文件中
 
@@ -14,17 +19,12 @@
 ```
 
 
-# 二、添加广告联盟和支持库
+## 2.2 添加广告联盟和支持库
 
 部分广告商的 SDK 运行依赖一些公共的第三方库，使用 Android Studio 构建的项目可以通过下述方式来将所依赖的第三方库导入你的项目。
 
-#### 1. 在Gradle中配置仓库地址
+### 2.2.1 配置仓库地址
 首先在您项目的module级的 `build.gradle` 文件中追加仓库地址
->**`请注意maven 的最新仓库地址是否与您使用的一致，若不一致会出现类似下面这种找不到库的报错`**</br>
-`<Build: failed at`</br>
-`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
-
-1.1 追加Mssdk仓库地址
 ```groovy
 android {
     defaultConfig {
@@ -34,51 +34,20 @@ repositories {
     flatDir {
         dirs 'libs'
     }
-    maven { url "http://bx-mvn.dataverse.cn:58081/repository/maven-releases/"}
-}
-
-
-
-```
-1.2 追加Mssdk仓库地址 仅适用于 Android Studio 2020.x.x 及以上 (可选)
-
-
-```groovy
-android {
-    defaultConfig {
-        //...
-    }
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-    maven { url "https://mvn-bx.dataverse.cn/repository/maven-releases/"}
-}
-
-```
-
-1.3 追加广告联盟的仓库地址
-```groovy
-android {
-    defaultConfig {
-        //...
-    }
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
+    google()
     mavenCentral()
     maven { url 'https://jitpack.io' }
     maven { url 'https://chartboostmobile.bintray.com/Chartboost' }
     maven { url 'https://android-sdk.is.com/'}
     maven { url 'https://artifact.bytedance.com/repository/pangle' }
     maven { url 'https://mvnrepository.com/artifact/com.inmobi.monetization/inmobi-ads' }
+    maven { url "https://mvn-bx.dataverse.cn/repository/maven-releases/"}
 }
 
 ```
 
-#### 2. 加入广告联盟
+
+### 2.2.2 引入广告联盟
 请在您的项目module级中的`build.gradle` 文件中按以下的方式添加依赖
  ```groovy   
   dependencies {
@@ -123,7 +92,7 @@ repositories {
 }
 ```
 
-#### 3. 配置必要的广告联盟参数
+# 3 配置必要的广告联盟参数
 请在项目的manifest中追加对admob和applovin广告联盟的参数支持。
 **【注意】value中的值仅用于测试，请联系相关人员获得正确的参数值**
 
@@ -140,7 +109,7 @@ repositories {
     </application>
 
 
-#### 4. 加入 Androidx 支持库
+# 4 加入 Androidx 支持库
 
 **【注意】请务必将这些依赖库引入你的项目，否则会导致程序崩溃！**
 
@@ -158,7 +127,7 @@ repositories {
 ```  
 
 
-# 三、修改 Proguard
+# 5 修改 Proguard
 如果你的项目使用了 `proguard`，你需要将 `proguard-project.txt` 文件中的内容复制粘贴到你项目使用的 `proguard` 配置文件中。
 ```groovy
 # 不做预校验，preverify是proguard的四个步骤之一，Android不需要preverify，去掉这一步能够加快混淆速度。
@@ -378,5 +347,12 @@ repositories {
 #pangle end
 ```
 
-# 四、Demo工程
+# 6 Demo工程
 为帮助您更好的了解MSSDK的接入以及使用，我们在这里提供了一个简单的[Demo工程](https://github.com/Avid-ly/Avidly-Android-MSSDK-AndroidStudio)。
+
+# 7  常见编译问题
+### 7.1 Could not HEAD...
+Q:`<Build: failed at`</br>
+`Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
+
+A:此错误表示您没有获取到本SDK的仓库地址，请将本文档中的maven仓库地址引入到您的项目中
