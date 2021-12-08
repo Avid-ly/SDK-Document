@@ -1,39 +1,17 @@
-# 1. 引用 SDK
-在 *.cs 文件中，引用有关统计 SDK 的命名空间。
-```csharp
-using UPTrace;
-```
+# 1.常见参数获取
+[如何获取userId](/tasdk/unity/unity_init?id=tasdk_unity_faq_userid)
 
-# 2. 初始化检查
-判断统计 SDK 是否完成初始化（支持 Android 与 iOS）。
+[如何获取openid](/tasdk/unity/unity_init?id=tasdk_unity_faq_openid)
 
-```csharp
-bool isTraceSDKInited();
-```
-# 3.统计包参数获取
+# 2.支付常见问题
 
-# 3.1 获取openid
-如需向 appsflyer 中设置 openid 参数，可使用如下方法获取。
+- [游戏没有没有用户系统，游戏用户ID如何处理](/tasdk/ios/ios_iap?id=iap_faq_1)
+- [支付单据获取的时机](/tasdk/ios/ios_iap?id=iap_faq_2)
+- [支付单据必须进行base64编码吗](/tasdk/ios/ios_iap?id=iap_faq_3)
 
+# 3.用户标签常见问题
 
-```csharp
-public static string getOpenIdForAndroid()
-```
->请在 V3.1.1.5 以上版本中添加此方法，并在初始化 API 前调用。
-
-
-# 3.2 获取userid
-
-如需获得TASDK中的唯一标识，可使用如下方法获取。
-
- ```java
-UPTraceApi.getUserId();
- ```
-> 此方法第一次调用时候需要时间。
-
-
-
-
+- [获取用户标签失败，或提示无权限](/tasdk/ios/ios_tag?id=faq_1)
 
  
 

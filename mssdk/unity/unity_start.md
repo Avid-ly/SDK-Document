@@ -8,4 +8,4 @@
 ![](../image/unity_import.png)
 
 # 2. 升级 SDK 包
-如工程中已导入统计 SDK 包， 请先删除旧版本sdk目录 **SDKPackage** 后再导入。
+如工程中已导入 SDK 包， 请先删除旧版本sdk目录 **SDKPackage** 后再导入。

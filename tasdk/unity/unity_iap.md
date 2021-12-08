@@ -1,5 +1,6 @@
 # 1. 概述
 
+
 如游戏中包含 Google 应用内支付（IAP）功能，需将支付结果同步至统计服务器以便分析用户数据。请使用以下 API 完成相应支付上报。
 
 > 如支付接口包含 extramap，则：<br>
@@ -7,8 +8,7 @@
 > &bull;&ensp;roleId：传游戏中的角色 ID (或游戏 ID)
 
 
-# 2.Android 支付上报
-
+#  2.Android 支付上报 
 ```csharp
 // Android 平台 API
 void traceZFLogReportForAndroid(string playerId , string iabPurchaseOriginalJson, string iabPurchaseSignature);
@@ -62,7 +62,7 @@ void traceZFLogReportWithServerForIos(string playerId, string gameAccountServer,
 > &bull;&ensp;如获取的 receiptDataString 已是 base64 编码后的，则不需要再次转码，可直接传值！<br>
 > &bull;&ensp;针对 iOS 支付，如获取到 {"Store":"AppleAppStore","TransactionID":"xxxxxx","Payload":"xxxxxxx"}，只需传入 Payload 后的xxxxxxx内容。</br>
 
-
+ 
 ## 3.2 iOS第三方平台支付上报
 
 - 如需使用 mycard、bluepay 等第三方支付平台功能，请调用我们的对应方法进行支付上报。

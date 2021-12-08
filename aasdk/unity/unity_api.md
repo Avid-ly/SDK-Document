@@ -3,15 +3,40 @@
 # AASDKApi
 
 此类是AASDK的入口，包含初始化，登录等方法
+## 1.SDK初始化方法
 
-|  方法   | 描述  |
+```C#
+public static void initSDK(string productId)
+```
+|  参数   | 描述  |
 |  ----  | ----  |
-| public static void initSDK(string productId)  | SDK初始化方法 | 
-| public static void accountLogin()| 登录方法 |
-| public static void accountLogin(bool isVisible) | 此方法用来设置自动登录是否展示弹窗 |
-|public static void showUserManagerUI() { | 此方法用来展示用户中心 |
-|public static string getFacebookLoginedToken() | 此方法用来获取Facebook登录的token |
-|public static string getLoginedGGid()  | 此方法用来获取唯一用户标识 |
+|  productId  | 产品Id  |
+## 2.登录
+```C#
+public static void accountLogin()
+```
+
+## 3.设置自动登录是否展示弹窗
+```C#
+public static void accountLogin(bool isVisible)
+```
+|  参数   | 描述  |
+|  ----  | ----  |
+|  isVisible  | 自动登录是否展示弹窗  |
+
+## 4.展示用户中心
+```C#
+public static void showUserManagerUI()
+```
+ ## 5.获取Facebook登录的token
+```C#
+public static string getFacebookLoginedToken()
+```
+ ## 6.获取唯一用户标识
+```C#
+public static string getLoginedGGid()
+```
+
 
 <br>
 

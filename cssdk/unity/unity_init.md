@@ -23,4 +23,6 @@ public static void init (string productId)
 ```
 CSSDKApi.init("productid");
 ```
+!> 初始化CSSDK之前，请先初始化AASDK或TASDK
 
+恭喜您，到此已经完成了SDK的初始化操作。

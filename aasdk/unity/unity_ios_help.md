@@ -8,6 +8,11 @@
 # 3.导出xcode工程
 unityPackage中包含EDM4U插件及对应的cocoaPods依赖文件 AASDKDependencies.xml,导出xcode工程后插件将自动下载依赖
 安装完成之后，应使用`.xcworkspace`打开项目，而不是`.xcodeproj`
+
+
+
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK初始化了
+
 # 4.常见编译问题
 ><span id="aasdk_unity_faq1">  Facebook高版本依赖Swift</span>
 当xcode编译或打包遇到如下错误的时候

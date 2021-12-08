@@ -104,3 +104,5 @@ android:theme="@style/CssAppTheme"
 # 6. Demo
 
 有关CSSDK 的接入及使用，可查看 [Demo工程](https://github.com/Avid-ly/CSSDK-Unity-Demo)。
+
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK初始化了

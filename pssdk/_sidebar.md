@@ -22,5 +22,5 @@
     * [Unity-Android接入设置](pssdk/unity/unity_android.md)
   * [请求授权](pssdk/unity/unity_request.md)
   * [API概览](pssdk/unity/unity_api.md)
-
+  * [常见问题](pssdk/unity/unity_faq.md)
 * [PSSDK 支持政策解读](pssdk/other/policy.md)
