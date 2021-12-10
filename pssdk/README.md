@@ -1,23 +1,21 @@
-# 文档概述
+# 产品介绍
 
-PSSDK 帮助开发者合规应对多个国家的隐私保护法，对不同地区用户提供符合当地法规的隐私条款和授权弹窗，保证游戏在各国家的合规性。
+PSSDK-隐私SDK，帮助开发者合规应对多个国家的隐私保护法，对不同地区用户提供符合当地法规的隐私条款和授权弹窗，保证游戏在各国家的合规性。旨在帮助用户在其游戏中快速接入用户隐私模块，提升开发效率和用户体验。
 
-为保证游戏合规性，请优先初始化 PSSDK，在获取用户授权状态后，再判断是否可收集相关用户信息。
-(例如：登录、获取 GAID/IDFA 等）
+-  [PSSDK 支持政策解读](/pssdk/other/policy.md)
+
 
 <br />
 
 
-# 文档目录
+# 快速开始
 
+请选择适合您的平台快速开始吧
 
--  [Unity 帮助文档](/pssdk/unity/unity_ios.md)
-
+-  [iOS 帮助文档](/pssdk/ios/ios_start.md)
 -  [Android 帮助文档](/pssdk/android/android_start.md)
+-  [Unity 帮助文档](/pssdk/unity/unity_start.md)
 
--  [IOS 帮助文档](/pssdk/ios/ios_start.md)
-
--  [PSSDK 支持政策解读](/pssdk/other/policy.md)
 
 <br />
 

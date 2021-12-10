@@ -4,7 +4,7 @@
 
 UPTraceApi是TASDK的入口类，包含了初始化，打点，登录上报，支付上报等功能，具体API参考如下：
 
-# 1.SDK初始化
+## 1.SDK初始化
 ```C#
 public static void initTraceSDKWithCallback(string productId, string channelId, Action<string> success, Action<string> fail)
 ```
@@ -16,11 +16,14 @@ public static void initTraceSDKWithCallback(string productId, string channelId, 
 |fail|初始化失败回调，string为失败原因|
 
 
-# 2.禁止使用隐私信息
+## 2.禁止使用隐私信息
+
 ```C#
 public static void disableAccessPrivacyInformation()
 ```
-# 3.事件打点
+
+## 3.事件打点
+
 ```C#
 public static void traceString(string key, string value)
 ```
@@ -28,21 +31,27 @@ public static void traceString(string key, string value)
 |---|---|
 |key|事件Key|
 |value|事件Value|
- # 4.计数打点
+
+## 4.计数打点
+
 ```C#
 public static void countKey(string key)
 ```
 |参数|描述|
 |---|---|
 |key|计数事件Key|
- # 5.游客登录上报
+
+## 5.游客登录上报
+
 ```C#
 public static void guestLogin(string playerId)
 ```
 |参数|描述|
 |---|---|
 |playerId|游客玩家Id|
- # 6.Facebook登录上报
+
+## 6.Facebook登录上报
+
 ```C#
 public static void facebookLogin(string playerId, string openId, string openToken)
 ```
@@ -51,7 +60,9 @@ public static void facebookLogin(string playerId, string openId, string openToke
 |playerId|玩家Id|
 |openId|此参数已废弃，请传入空字符串|
 |openToken|facebook登录返回的token|
-# 7.通用登录上报
+
+## 7.通用登录上报
+
 ```C#
 public static void logCommonLogin(string loginType, string playerId, string loginToken, Dictionary<string, string> extension)
 ```
@@ -87,7 +98,8 @@ loginToken参数说明
 |LoginTypeApple|apple返回的identityToken字符串|
 |LoginTypeOther|对应的登录方式返回的能校验用户合法性的对应参数|
 
-# 8.AASDK登录上报，适用于使用AASDK登录后的上报
+## 8.AASDK登录上报，适用于使用AASDK登录后的上报
+
 ```C#
 public static void logAASLogin(string loginType, string playerId, string loginToken, string ggid, Dictionary<string, string> extension)
 ```
@@ -113,7 +125,8 @@ loginType参数有以下可选值，可直接引用登录类型，如UpTraceApi.
 |LoginTypeApple|apple|苹果登录|
 |LoginTypeOther|other|其他登录类型|
 
- # 6.iOS非Appstore内购支付上报
+## 9.iOS非Appstore内购支付上报
+
 ```C#
 public static void traceThirdpartyZFLogReportForIos(string playerId, string thirdparty, string receiptDataString)
 ```
@@ -122,7 +135,9 @@ public static void traceThirdpartyZFLogReportForIos(string playerId, string thir
 |playerId|玩家Id|
 |thirdparty|为第三方支付平台名称如 mycard 和 bluepay 等|
 |receiptDataString|支付单据|
- # 7.iOS非Appstore内购支付上报(带区服)
+
+## 10.iOS非Appstore内购支付上报(带区服)
+
 ```C#
 public static void traceThirdpartyZFLogReportWithServerForIos(string playerId, string gameAccountServer, string thirdparty, string receiptDataString)
 ```
@@ -132,7 +147,9 @@ public static void traceThirdpartyZFLogReportWithServerForIos(string playerId, s
 |gameAccountServer|玩家区服|
 |thirdparty|为第三方支付平台名称如 mycard 和 bluepay 等|
 |receiptDataString|支付单据|
- # 8.iOS Appstore内购支付上报 
+
+## 11.iOS Appstore内购支付上报 
+
 ```C#
 public static void traceZFLogReportWithPlayerIdForIos(string playerId, string receiptDataString, bool isbase64)
 ```
@@ -142,7 +159,8 @@ public static void traceZFLogReportWithPlayerIdForIos(string playerId, string re
 |isbase64|是否为64编码后，Apple默认返回单据base64编码|
 |receiptDataString|支付单据，Apple默认返回单据base64编码，无需再次转码|
 
- # 9.iOS Appstore内购支付上报 (带区服)
+## 12.iOS Appstore内购支付上报 (带区服)
+ 
 ```C#
 public static void traceZFLogReportWithServerForIos(string playerId, string gameAccountServer, string receiptDataString, bool isbase64)
 ```
@@ -156,7 +174,8 @@ public static void traceZFLogReportWithServerForIos(string playerId, string game
 |API|描述|
 |:--------------|--------------------|
 
-  # 10.iOS Appstore内购支付上报 (带区服+额外参数)
+## 13.iOS Appstore内购支付上报 (带区服+额外参数)
+
 ```C#
 public static void traceZFLogReportWithServerForIos(string playerId, string gameAccountServer, string receiptDataString, bool isbase64, Dictionary<string, string> dic)
 ```
@@ -167,7 +186,9 @@ public static void traceZFLogReportWithServerForIos(string playerId, string game
 |isbase64|是否为64编码后，Apple默认返回单据base64编码|
 |receiptDataString|支付单据，Apple默认返回单据base64编码，无需再次转码|
 |dic|额外参数|
-  # 11.Android GP支付上报
+
+## 14.Android GP支付上报
+
 ```C#
 public static void traceZFLogReportForAndroid(string gameAccountId, string iabPurchaseOriginalJson, string iabPurchaseSignature)
 ```
@@ -177,7 +198,8 @@ public static void traceZFLogReportForAndroid(string gameAccountId, string iabPu
 | iabPurchaseOriginalJson | Purchase.getOriginalJson() • Google 支付传入在 onConsumeFinished(Purchase, IabResult) 中返回的原始数据。 • MyCard 支付传入返回的原始 json 数据。 • BluePay 支付传入返回的原始 json 数据。 • Amazon 支付传入 json 格式：{“receiptId”:”yourReceiptId”,”userId”:”yourUserId”} 示例： {“receiptId”:”mINy5VRd1mk2z-WBtTqw9sdf1GWhnuVx07kzTBMR600=![2](https://github.githubassets.com/images/icons/emoji/2.png)11”,”userId”:”LRyD0FfW_3zeOlfJyxpVll-Z1rKn6dSf9xs12fFg0=”}。 |
 | iabPurchaseSignature    | Purchase.getSignature() • Google 支付请务必传入 Google 返回的原始数据。 • MyCard 支付传入 mycard。 • BluePay 支付传入 bluepay。 • Amazon 支付传入 amazon。 |
 
-# 12.Android GP支付上报（带参数）
+## 15.Android GP支付上报（带参数）
+
 ```C#
 public static void traceZFLogReportForAndroid(string gameAccountId, string iabPurchaseOriginalJson, string iabPurchaseSignature, Dictionary<string, string> dic)
 ```
@@ -188,7 +210,9 @@ public static void traceZFLogReportForAndroid(string gameAccountId, string iabPu
 | iabPurchaseSignature    | Purchase.getSignature() • Google 支付请务必传入 Google 返回的原始数据。 • MyCard 支付传入 mycard。 • BluePay 支付传入 bluepay。 • Amazon 支付传入 amazon。 |
 | dic    | 额外参数 |
 
-# 13.Android GP支付上报（带区服）
+
+## 16.Android GP支付上报（带区服）
+
 ```C#
 public static void traceZFLogReportWithServerForAndroid(string gameAccountId, string gameAccountServer, string iabPurchaseOriginalJson,string iabPurchaseSignature)
 ```
@@ -199,7 +223,8 @@ public static void traceZFLogReportWithServerForAndroid(string gameAccountId, st
 | iabPurchaseOriginalJson | Purchase.getOriginalJson() • Google 支付传入在 onConsumeFinished(Purchase, IabResult) 中返回的原始数据。 • MyCard 支付传入返回的原始 json 数据。 • BluePay 支付传入返回的原始 json 数据。 • Amazon 支付传入 json 格式：{“receiptId”:”yourReceiptId”,”userId”:”yourUserId”} 示例： {“receiptId”:”mINy5VRd1mk2z-WBtTqw9sdf1GWhnuVx07kzTBMR600=![2](https://github.githubassets.com/images/icons/emoji/2.png)11”,”userId”:”LRyD0FfW_3zeOlfJyxpVll-Z1rKn6dSf9xs12fFg0=”}。 |
 | iabPurchaseSignature    | Purchase.getSignature() • Google 支付请务必传入 Google 返回的原始数据。 • MyCard 支付传入 mycard。 • BluePay 支付传入 bluepay。 • Amazon 支付传入 amazon。 |
 
-# 14.Android GP支付上报（带区服+参数）
+## 17.Android GP支付上报（带区服+参数）
+
 ```C#
 public static void traceZFLogReportWithServerForAndroid(string gameAccountId, string gameAccountServer, string iabPurchaseOriginalJson,string iabPurchaseSignature, Dictionary<string, string> dic)
 ```
@@ -212,7 +237,8 @@ public static void traceZFLogReportWithServerForAndroid(string gameAccountId, st
 | dic    | 额外参数 |
 
 
- # 15.Twitter登录上报
+## 18.Twitter登录上报
+
 ```C#
 public static void twitterLogin(string playerId, string twitterId, string twitterUserName, string twitterAuthToken) 
 ```
@@ -223,16 +249,19 @@ public static void twitterLogin(string playerId, string twitterId, string twitte
 |twitterUserName|twitter用户名|
 |twitterAuthToken|twitter登录返回的token|
 
- # 16.在线时长上报-回到前台
+## 19.在线时长上报-回到前台
+
 ```C#
 public static void becomeActive()
 ```
-# 17.在线时长上报-回到后台
+## 20.在线时长上报-回到后台
+
 ```C#
 public static void resignActive()
 ```
 
- # 18.获取推广用户标签
+## 21.获取推广用户标签
+
 ```C#
 public static void getConversionData(string afConversionData, Action<string> success, Action<string> fail)
 ```
@@ -242,7 +271,8 @@ public static void getConversionData(string afConversionData, Action<string> suc
 |success|成功回调|
 |fail|失败回调|
  
- # 19.获取付费用户标签
+## 22.获取付费用户标签
+
 ```C#
 public static void getPayUserLayer(Action<string> success, Action<string> fail)
 ```
@@ -253,7 +283,8 @@ public static void getPayUserLayer(Action<string> success, Action<string> fail)
 |API|描述|
 |:--------------|--------------------|
 
-# 19.获取广告用户标签
+## 23.获取广告用户标签
+
 ```C#
 public static void getUserAdLayer(Action<string> success, Action<string> fail)
 ```
@@ -261,7 +292,9 @@ public static void getUserAdLayer(Action<string> success, Action<string> fail)
 |---|---|
 |success|成功回调|
 |fail|失败回调|
-# 20.设置FirebaseId
+
+## 24.设置FirebaseId
+
 ```C#
 public static void setFirebaseId(string firebaseId)
 ```
@@ -269,12 +302,14 @@ public static void setFirebaseId(string firebaseId)
 |---|---|
 |firebaseId|firebaseId|
 
-# 21.上报iOS ATT状态
+## 25.上报iOS ATT状态
+
 ```C#
 public static void logATTStatusForIos()
 ```
 
-# 22.展示测试套件（仅Unity-Android）
+## 26.展示测试套件（仅Unity-Android）
+
 ```C#
 public static void showHelper(string pid, string channel)
 ```
@@ -283,7 +318,8 @@ public static void showHelper(string pid, string channel)
 |pid|产品Id|
 |channel|渠道，请填写 "32400"|
 
-# 23.设置DEBUG日志
+## 27.设置DEBUG日志
+
 ```C#
 public static void enalbeDebugMode(bool isOpen)
 ```
