@@ -1,4 +1,4 @@
-# 概述
+# 1.概述
 
 如果游戏中需要获得用户标签，请使用以下 API 来进行获取。<br>
 
@@ -7,12 +7,26 @@
 - 用户广告标签
 - deeplink标签
 - ABTest数据
+- 
+对此我们分别提供了对应的获取方法，
+
+!> 您必须提前申请对应标签的权限，才能在TASDK中正确的获取到对应的标签。如您未申请权限，则无法获得标签。
 
 &ensp;
 
-#  1.推广用户标签
+# 2.前提条件
 
-## 1.1 添加AppsFlyer引用
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 完成项目设置
+- 请务必在获取用户标签之前初始化TASDK
+
+<br>
+
+#  3.推广用户标签
+
+## 3.1 添加AppsFlyer引用
 
 
 如果您已添加AppsFlyer到您的项目中，请忽略此步骤
@@ -22,7 +36,7 @@
 [Appsflyer-unity 接入帮助](https://support.appsflyer.com/hc/en-us/articles/360007314277#introduction)
 
 &ensp;
-## 1.2 获得用户标签
+## 3.2 获得用户标签
 
 
 ```csharp
@@ -59,9 +73,9 @@ public void onGetConversionDataClick(string conversionDataJson)
 ```
 
 &ensp;
-#  2. 付费用户标签
+# 4. 付费用户标签
 
-## 2.1 获得用户标签
+## 4.1 获得用户标签
 
 
 ```csharp
@@ -98,9 +112,9 @@ private void onPayUserLayerFail(string error) {
 }
 ```
 
-#  3. 用户广告标签
+#  5. 用户广告标签
 
-## 3.1 获得用户广告标签
+## 5.1 获得用户广告标签
 
 
 ```csharp
@@ -136,9 +150,9 @@ private void onUserAdLayerFail(string error) {
 }
 ```
 
-# 4.DeepLink标签
+# 6.DeepLink标签
 
-## 4.1 获得DeepLink标签
+## 6.1 获得DeepLink标签
 ```csharp
 /**
 * 获取deep link 数据
@@ -177,9 +191,9 @@ Debug.Log("===> onDeepLinkDataFail Callback at: " + error);
 }
 ```
 
-# 5. ABTest标签
+# 7. ABTest标签
 
-## 5.1 获得 ABTest标签
+## 7.1 获得 ABTest标签
 ```csharp
  /*
  * 获取 AB Test数据 
@@ -219,7 +233,7 @@ Debug.Log("===> onABTestDataFail Callback at: " + error);
 #endregion
 ```
 
-## 5.2 ABTest标签说明
+## 7.2 ABTest标签说明
 
 `abTest`参数的类型为json字符串
 
@@ -257,7 +271,24 @@ Debug.Log("===> onABTestDataFail Callback at: " + error);
 - 上面示例即 A_a 组配置是 sta_Aa，sta_Aa 为约定下发配置信息，客户端/服务端 拿到相应的信息做好相应的hard code 来做映射，进行 / 下发相应游戏配置，
 - 以上面示例来说：用户命中了3个组别 A_a   A_a_a   B_b A_a ： 约定配置信息为 sta_Aa , 客户端/ 服务端需要根据约定好的 sta_Aa 对应的配置信息来对游戏进行控制
 
+如您对用户标签有疑问，请参考本页最后的常见问题。
 
+恭喜您，您已经完成了TASDK的所有功能的集成！
+
+接下来，还有两项重要步骤请您耐心完成：
+
+- [隐私信息处理](/tasdk/unity/unity_gdpr.md)
+- [AppsFlyer处理](/tasdk/unity/unity_appsflyer.md)
+
+<br>
+
+# 8.常见问题
+
+- 获取用户标签失败，或提示无权限
+
+> <span id="tasdk_unity_faq_tag_1">获取用户标签失败，或提示无权限</span>
+
+您必须提前申请对应标签的权限，才能在TASDK中正确的获取到对应的标签。如您未申请权限，则无法获得标签。
 
 
 

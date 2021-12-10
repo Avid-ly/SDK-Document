@@ -13,7 +13,8 @@
 
 # 3 绑定
 >以下API务必在TASDK与AppsflyerSDK初始化后调用，并保证获取的afId和openId不为空
-# 1. 将AppsFlyer的UID传递给统计包
+
+## 3.1 将AppsFlyer的UID传递给统计包
 
 如果使用AppsFlyer，需要在统计包初始化成功后调用setAFId，可在初始化回调中或初始化后的某个时机调用；</br>
 API：
@@ -39,7 +40,7 @@ public void initFailCallback(string message)
 }
 ```
 
-# 2. 将统计包的openId上传给AppsFlyer
+## 3.2 将统计包的openId上传给AppsFlyer
 
 如果使用的AppsFlyer，需要将统计包的openId上传给AppsFlyer，
 > 请在TASDK初始化完成后调用，初始化完成的标志初始化回调成功

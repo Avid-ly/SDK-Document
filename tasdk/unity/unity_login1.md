@@ -1,4 +1,25 @@
-# 1. 游客登录上报
+# 1 登录事件上报介绍
+
+由于登录环节在游戏或应用中至关重要，因此我们单独提供了登录事件方法，以便快速统计登录事件。
+
+# 2 前提条件
+
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 完成项目设置
+- 请务必在登录上报之前初始化TASDK
+- 确保您未使用AASDK，如使用AASDK，请参考[使用AASDK登录上报](/tasdk/unity/unity_login2.md)
+
+# 3 登录上报
+
+如果您未使用AASDK登录，而是自行接入的登录，我们为您提供了以下登录上报方法：
+
+- 游客登录 上报
+- Facebook登录 上报
+- 通用登录 上报
+- 华为登录 上报
+## 3.1 游客登录上报
 如通过游客方式登录，需调用此方法上报：
 ```csharp
 /**
@@ -14,7 +35,7 @@ UPTraceApi.guestLogin ("guest_1234");
 
 &ensp;
 
-# 2. Facebook 登录上报
+## 3.2 Facebook 登录上报
 如通过 Facebook 方式登录，需要调用此方法上报：
 ```csharp
 /**
@@ -34,7 +55,7 @@ UPTraceApi.facebookLogin ("facebook_user_id", "", "facebook_token");
 
 
 
-# 3.通用登录上报（支持 Android 与 iOS）
+## 3.3 通用登录上报（支持 Android 与 iOS）
 
 ```
 public static string LoginTypeGuest 		= "guest";
@@ -59,7 +80,7 @@ public static void logCommonLogin(string loginType, string playerId, string logi
 ```
 
 
-# 4. 华为登录上报（支持 Android）
+##  3.4 华为登录上报（支持 Android）
 有关华为 SDK 登录接口详情，请参考[此处](https://developer.huawei.com/consumer/cn/service/hms/catalog/HuaweiJointOperation.html?page=hmssdk_jointOper_api_reference_c9)。
 
 **方法一：** 无需对登录结果进行验签时，请调用此方法。

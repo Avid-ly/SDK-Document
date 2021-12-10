@@ -11,7 +11,7 @@
 
 # 3.用户标签常见问题
 
-- [获取用户标签失败，或提示无权限](/tasdk/ios/ios_tag?id=faq_1)
+- [获取用户标签失败，或提示无权限](/tasdk/unity/unity_tag?id=tasdk_unity_faq_tag_1)
 
  
 
