@@ -26,3 +26,4 @@ private const string PRODUCTID = "999999";
 AASDKApi.initSDK (PRODUCTID);
 ```
 
+恭喜您，到此已经完成了SDK的初始化操作，接下来您可以进行[登录](/aasdk/unity/unity_login.md)啦。

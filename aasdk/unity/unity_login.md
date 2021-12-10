@@ -139,8 +139,51 @@ void getLoginedGGid (）
 ```csharp
 AASDKApi.getLoginedGGid();
 ```
-# 9.常见问题
-><span id="aasdk_unity_faq3">AppsFlyer Unity插件导致Facebook登录没有回调的问题</span>
+
+果您对登录流程有任何疑问，请参考文档最后的常见使用问题。
+
+恭喜您，已经完成了登录相关操作，接下来让我们去设置[用户中心](/aasdk/unity/unity_user_center.md)吧
+
+# 9.使用问题
+
+- 如何获取用户的登录方式
+- 如何获取用户的标识
+- 如何判断用户切换了账户
+- 我需要缓存用户数据吗
+- AppsFlyer Unity插件导致Facebook登录没有回调的问题
+
+> <span id="aasdk_unity_login_faq_1">如何获取用户的登录方式</span>
+
+首先您需要获取登录回调，在登录成功回调中的第二个字符串mode字段即为用户的登录方式，详细登录方式对应如下：
+
+| loginMode(string) | 登录方式   |
+| -------------- | ---------- |
+| 1              | guest      |
+| 2              | aas        |
+| 3              | facebook   |
+| 4              | googleplay |
+| 5              | twitter    |
+| 6              | instagram  |
+| 7              | gamecenter |
+| 8              | ult        |
+| 9              | apple      |
+| 10             | other      |
+
+
+> <span id="aasdk_unity_login_faq_2">如何获取用户的标识</span>
+
+GGID为用户唯一标识，您可以调用`AASDKApi.getLoginedGGid();`方法，获取用户唯一标识。当GGID为空值时，标识当前用户未登录。
+
+> <span id="aasdk_unity_login_faq_3">如何判断用户切换了账户</span>
+
+首先您需要注册登录回调，在登录回调中ggid属性为用户唯一标识，您需要自行记录上一次的用户唯一标识与本次回调的唯一标识做对比，如不一致， 代表用户切换了账号
+
+> <span id="aasdk_unity_login_faq_4">我需要缓存用户数据吗</span>
+
+如您需要使用GGID来做业务逻辑，建议您缓存GGID
+
+
+><span id="aasdk_unity_login_faq_5">AppsFlyer Unity插件导致Facebook登录没有回调的问题</span>
 
 解决方案
 
