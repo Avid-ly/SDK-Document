@@ -13,9 +13,9 @@
 
 ## 2.2 反馈问题 API
 
-`
+```java
 void feedback(Context context)
-`
+```
 </br>
 
 调用示例：
@@ -35,9 +35,9 @@ public void feedback(View view) {
 
 ## 3.2 是否有新消息
 
-`
+```java
 void setNewReplayCallback(CSSExistNewReplyCallback callback)
-`
+```
 </br>
 
 调用示例：
