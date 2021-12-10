@@ -5,8 +5,6 @@ function plugin (hook, vm) {
     js[0].style.position = "fixed";
     // js[0].style.width = "100%";
     // js[0].style.backgroundColor = "red";
-    console.log("ssss")
-    console.log(js)
   });
 }
 
