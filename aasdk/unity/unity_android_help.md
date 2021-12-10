@@ -1,4 +1,4 @@
----
+
 # 1. 前提条件
 - Android 平台
 - 已经接入统计包
@@ -9,7 +9,7 @@
 # 2. 目录结构
 成功导入 Unity 插件 Android 版本后，检查 `Assets` 目录项下是否存在 `SDKPACKAGE` 。
 
----
+
 # 3. 下载依赖
 
 
@@ -19,6 +19,7 @@
 
 &ensp;&ensp;2）下载依赖文件
 右键Assets目录，选择External Dependency Manager - Android Resolver - Force Resolve, 下载依赖的jar包
+
 # 4. 配置社交平台参数
 ## 4.1 AndroidManifest.xml 必要设置
 
@@ -30,7 +31,7 @@
 ```
  <meta-data
     android:name="com.facebook.sdk.ApplicationId"
-    android:value="fb[your_facebook_app_id]" /> 
+    android:value="fbyour_facebook_app_id" /> 
  <activity
     android:name="com.facebook.FacebookActivity"
     android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -42,7 +43,7 @@
            <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="fb[your_fb_login_protocol_scheme]" /> - 
+            <data android:scheme="fbyour_fb_login_protocol_scheme" /> - 
        </intent-filter>
   </activity>
 ```
@@ -114,3 +115,4 @@ android {
 <application android:name="android.support.multidex.MultiDexApplication"></application>
 ```
 
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK初始化了

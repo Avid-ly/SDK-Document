@@ -1,20 +1,30 @@
 
-# 1. 概述
+# 1 支付上报介绍
 
-如游戏中包含 Google 应用内支付功能，需将支付结果同步至统计服务器以便分析用户数据。
-请使用以下 API 完成相应支付上报。
-&ensp;
-# 2. 添加引用
+由于支付环节在游戏或应用中至关重要，因此我们单独提供了支付事件上报方法，以便快速统计支付事件。
 
-所有方法均以 static 定义在 `ZFLogReport` 类中，请将 **ZFLogReport** 引用至 Java 代码中。
-```java
-import com.aly.zflog.ZFLogReport;
-```
-&ensp;
+其中支付分为
+
+- [谷歌支付](https://developer.android.google.cn/google/play/billing/getting-ready "链接")
+- [华为支付](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/introduction-0000001050033062 "链接")
+- [亚马逊支付](https://github.com/amzn/amazon-pay-sdk-java?ld=NSGoogle "链接")
+
+
+对此我们分别提供了对应的支付上报方法
+
+
+# 2 前提条件
+
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 请务必在上报之前初始化TASDK
+
+
 # 3. 支付上报
 
 ```java
- void logReport((String playerId, String iabPurchaseOriginalJson, String iabPurchaseSignature);
+ void logReport((String playerId, String iabPurchaseOriginalJson, String iabPurchaseSignature)
 ```
 
 参数说明
@@ -25,10 +35,6 @@ import com.aly.zflog.ZFLogReport;
 |iabPurchaseOriginalJson |  Purchase.getOriginalJson()<br>&bull;&ensp;Google 支付，传入在 onPurchasesUpdated(BillingResult billingResult, List<Purchase> purchases) 中返回的原始数据。</br><br>&bull;&ensp;Amazon 支付传入 json 格式：{“receiptId”:”amazonReceiptId”,”userId”:”amazonUserId”}<br>示例：</br>{“receiptId”:”mINy5VRd1mk2z-WBtTqw9sdf1GWhnuVx07kzTBMR600=:2:11”,”userId”:”LRyD0FfW_3zeOlfJyxpVll-Z1rKn6dSf9xs12fFg0=”}<br>- `UserId`：代表应用商店中使用的不同亚马逊用户 ID（`purchaseResponse > userData > userId`）。</br>- `ReceiptId`：购买的唯一 ID（`purchaseResponse > receipt > receiptId`<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;或`purchaseUpdatesResponse > receipts > receipt > receiptId`）。</br>&bull;&ensp;Huawei 支付返回purchaseResultInfo 中PurchaseData的原始数据。<br>&bull;&ensp;BluePay 支付传入返回的原始 json 数据。</br>&bull;&ensp;MyCard 支付传入返回的原始 json 数据。|
 | iabPurchaseSignature|   Purchase.getSignature()<br>&bull;&ensp;Google 支付请务必传入 Google 返回的原始数据。</br>&bull;&ensp;Amazon 支付传入 "amazon"。</br>&bull;&ensp;Huawei 支付请务必传入 purchaseResultInfo中的Signature原始数据。</br>&bull;&ensp;MyCard 支付传入 "mycard"。<br>&bull;&ensp;BluePay 支付传入 "bluepay"。|
 关于支付，可以参考
-
-- [谷歌支付](https://developer.android.google.cn/google/play/billing/getting-ready "链接")
-- [华为支付](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/introduction-0000001050033062 "链接")
-- [亚马逊支付](https://github.com/amzn/amazon-pay-sdk-java?ld=NSGoogle "链接")
 
 调用示例：
 ```java
@@ -162,3 +168,12 @@ ZFLogReport.logReportWithServerAndExtraMap(playerId, playerServer, iabPurchaseOr
 - [谷歌支付](https://github.com/wawo00/GoogleBilling_Android.git "链接")
 - [华为支付](https://github.com/wawo00/HuaweiPay_Android/tree/master "链接")
 
+
+
+
+到此，您已经完成了支付上报的集成。
+
+接下来，您可以根据自己的需求，选取对应的功能并集成到项目里：
+
+- [在线用户时长上报](/tasdk/android/android_duration_report.md)
+- [用户标签](/tasdk/android/android_tag.md)

@@ -19,8 +19,8 @@
   * [常见问题](tasdk/ios/ios_faq.md)
 
 * Android
-  * [工程引入](tasdk/android/android_start.md)
-  * [API介绍](tasdk/android/android_api.md)
+  * [开始使用](tasdk/android/android_start.md)
+  * [初始化](tasdk/android/android_init.md)
   * [事件打点](tasdk/android/android_log.md)
   * 登录上报
   	* [未使用AASDK](tasdk/android/android_login1.md)
@@ -30,7 +30,7 @@
   * [用户标签](tasdk/android/android_tag.md)
   * [测试套件](tasdk/android/android_test_help.md)
   * [AppsFlyer处理](tasdk/android/android_appsflyer.md)
-  
+  * [常见问题](tasdk/android/android_faq.md)
 * Unity
   * [开始使用 ](tasdk/unity/unity_start.md)
   * 项目设置
@@ -47,7 +47,8 @@
   * [测试套件](tasdk/unity/unity_test_help.md)
   * [AppsFlyer处理](tasdk/unity/unity_appsflyer.md)
   * [隐私信息处理](tasdk/unity/unity_gdpr.md)
-  * [常见问题](tasdk/unity/unity_api.md)
+  * [API概述](tasdk/unity/unity_api.md)
+  * [常见问题](tasdk/unity/unity_faq.md)
 
 * [API列表](tasdk/api.md)
 * [S2S 服务端事件上报帮助文档](tasdk/s2s.md)

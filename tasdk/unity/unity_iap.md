@@ -1,14 +1,22 @@
 # 1. 概述
 
+
 如游戏中包含 Google 应用内支付（IAP）功能，需将支付结果同步至统计服务器以便分析用户数据。请使用以下 API 完成相应支付上报。
 
 > 如支付接口包含 extramap，则：<br>
 > &bull;&ensp;alyPlayerId：只能传 ggid</br>
 > &bull;&ensp;roleId：传游戏中的角色 ID (或游戏 ID)
 
+# 2.前提条件
 
-# 2.Android 支付上报
+在您的应用中集成登录上报之前，您必须：
 
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 完成项目设置
+- 请务必在上报之前[初始化TASDK](/tasdk/unity/unity_init.md)
+
+
+#  3.Android 支付上报 
 ```csharp
 // Android 平台 API
 void traceZFLogReportForAndroid(string playerId , string iabPurchaseOriginalJson, string iabPurchaseSignature);
@@ -31,9 +39,9 @@ void traceZFLogReportWithServerForAndroid(string playerId , string gameAccountSe
 | etc| <br>&bull;&ensp;传入额外信息  
 &ensp;
 
-# 3. iOS支付上报
+# 4. iOS支付上报
 
-## 3.1 Apple Store应用内支付
+## 4.1 Apple Store应用内支付
 > 需在支付成功后调用 Apple IAP 上报，即`-(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transaction`中调用。
 
 - 如需使用 APP Store 的应用内支付（IAP）功能，请调用我们的对应方法进行支付上报。
@@ -63,7 +71,7 @@ void traceZFLogReportWithServerForIos(string playerId, string gameAccountServer,
 > &bull;&ensp;针对 iOS 支付，如获取到 {"Store":"AppleAppStore","TransactionID":"xxxxxx","Payload":"xxxxxxx"}，只需传入 Payload 后的xxxxxxx内容。</br>
 
 
-## 3.2 iOS第三方平台支付上报
+## 4.2 iOS第三方平台支付上报
 
 - 如需使用 mycard、bluepay 等第三方支付平台功能，请调用我们的对应方法进行支付上报。
 

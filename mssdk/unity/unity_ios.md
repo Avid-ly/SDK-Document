@@ -35,7 +35,7 @@ Applovin广告key: AppLovinSdkKey
 
 
 
-# 3. 启用Facebook广告追踪功能
+# <span id="mssdk_unity_fb"> 3. 启用Facebook广告追踪功能</span>
 
 从 iOS 14 开始，您将需要设置 setAdvertiserTrackingEnabled 标记。通过此设置，您可根据自身需履行法定义务、平台条款和您对用户的承诺，通知 Audience Network 是否使用数据来投放个性化广告。如果标记设置为 false，我们将无法投放个性化广告。[Facebook参考文档](https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/advertising-tracking-enabled)
 
@@ -56,7 +56,7 @@ Applovin广告key: AppLovinSdkKey
 
 
 以下是示例代码
-
+>必须在Apple ATT 请求授权结果的回调中设置FB广告追踪标记
 ```
 // 在需要使用的地方引入以下头文件
 #import <FBAudienceNetwork/FBAudienceNetwork.h>
@@ -70,8 +70,9 @@ if (@available(iOS 14, *)) {
 }
 ```
 
-
 <br>
+
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK[初始化](/mssdk/unity/unity_init)了
 
 ## <span id="unity-ios-faq1"> 4.常见编译问题</span>
 

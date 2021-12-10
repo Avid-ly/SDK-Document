@@ -19,3 +19,4 @@
 # 4. Demo
 &ensp;&ensp;&ensp;有关PSSDK 的接入及使用，可查看 [Demo工程](https://github.com/Avid-ly/Unity-PSSDK_AndroidDemo)。
 
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，[请求授权](/pssdk/unity/unity_request.md)了

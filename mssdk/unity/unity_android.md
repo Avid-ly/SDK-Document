@@ -77,4 +77,5 @@ android {
     <application 
           android:name="android.support.multidex.MultiDexApplication">
         </application>
-		
+
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK[初始化](/mssdk/unity/unity_init)了

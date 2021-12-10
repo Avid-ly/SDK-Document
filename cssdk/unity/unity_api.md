@@ -1,95 +1,43 @@
-# 1.初始化CSSDK
+以下是CSSDK的API列表，方便您查询和使用
 
-方法如下
+# CSSDKApi
 
+此类是CSSDK的入口，包含初始化等方法
+## 1.SDK初始化方法
+```C#
+public static void init (string productId)
 ```
-/*
-* 初始化
-* @param productId	产品id
-*/
-public static void init (string productId) 
-```
-示例
+|  参数   | 描述  |
+|  ----  | ----  |
+|  productId  | 产品PID  |
 
-```
-CSSDKApi.init("productid");
-```
 
-# 2.展示客服页面
-
-方法如下
-
-```
-/*
-* 展示客服页面
-*/
+## 2.展示客服与反馈
+```C#
 public static void show ()
 ```
-示例
 
+## 3.检查是否有未读新消息
+```C#
+public static void haveNewMessage (Action<bool,string> callback)
 ```
-CSSDKApi.show();
-```
+|  参数   | 描述  |
+|  ----  | ----  |
+|  callback  | 消息回调  |
 
-# 3.查询是否有新消息
-
-方法如下
-
-```
-/*
-* 查询是否有新消息
-* @param callBack	回调 true表示存在，false表示不存在或者存在问题，msg中存在详细信息
-*/
-public static void haveNewMessage (Action &lt;bool,msg> callBack)
-```
-示例
-
-```
-public void onHaveNewMessageClick() {
-	CSSDKApi.haveNewMessage(new System.Action &lt;bool,string>(onHaveNewMessageCallback));
-
-	showLogMsg("onHaveNewMessageClick press  ");
-    }
-
-private void onHaveNewMessageCallback(bool result,string msg) {
-	showLogMsg("onHaveNewMessageCallback  "+"result: "+result+" msg : "+msg);
-}
-```
-
-# 4.追加透传参数（如有需要可以使用）
-
-方法如下
-
-```
-/*
-* 追加透传参数（如有需要可以使用）
-* paramJson		需要额外上传的数据
-*/
+## 4.追加额外透传参数
+```C#
 public static void addExtraParam (Dictionary<string, string> dic)
 ```
-示例
-
-```
- Dictionary<string, string> dic = new Dictionary<string, string>();
- dic.Add("hotfixversion", "1.0.0.21");
- CSSDKApi.addExtraParam(dic);
-```
-
-# 5.获取SDK版本号
-
-###仅适用于ios
-
-方法如下
-
-```
-/*
-* 获取SDK版本号
-* return	SDK版本号
-*/
+|  参数   | 描述  |
+|  ----  | ----  |
+|  dic  | 透传参数  |
+## 5.获取SDK版本号
+```C#
 public static string getVersion ()
 ```
-示例
 
-```
-string sdkVersion = CSSDKApi.getVersion();
-```
+<br>
+
+
+

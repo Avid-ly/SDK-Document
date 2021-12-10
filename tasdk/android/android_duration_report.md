@@ -1,18 +1,20 @@
 
-# 1. 概述
+# 1 用户时长上报介绍
 
-如游戏需要上报游戏时长，请使用以下 API 完成相应在线时长的上报。
-&ensp;
-# 2. 添加引用
+由于用户时长在游戏或应用中至关重要，因此我们单独提供了用户时长事件上报方法，以便快速统计用户时长。
 
-所有方法均以 static 定义在 `DurationReport` 类中，请将 **DurationReport** 引用至 Java 代码中。
-```java
-import com.aly.duration.DurationReport;
-```
-&ensp;
-# 3. 初始化上报信息
+# 2 前提条件
 
-初始化建议在  `onCreate`方法中调用，且不能在子线程中调用，也请不要多次调用
+在您的应用中集成登录上报之前，您必须：
+
+- 按照我们的步骤将TASDK集成到您的项目中。
+- 请务必在上报之前初始化TASDK
+
+
+
+# 3 初始化上报信息
+
+>初始化建议在  `onCreate`方法中调用，且不能在子线程中调用，请不要多次调用
 
 ```java
 void initReport(String serverName, String serverZone, String uId, String ggId);
@@ -65,4 +67,8 @@ void onAppPause();
         DurationReport.onAppPause();
     }
 ```
+到此，您已经完成了用户在线时长上报的集成。
 
+接下来，您可以根据自己的需求，选取对应的功能并集成到项目里：
+
+- [用户标签](/tasdk/android/android_tag.md)

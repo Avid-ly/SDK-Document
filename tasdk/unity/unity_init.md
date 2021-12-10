@@ -1,11 +1,20 @@
-# 1. 引用 SDK
+# 1.前提条件
+
+在您初始化TASDK之前，您必须：
+
+- 按照我们的步骤将 TASDK 集成到您的项目中。
+- 完成项目设置
+
+# 2. 引用 SDK
 在 *.cs 文件中，引用有关统计 SDK 的命名空间。
 ```csharp
 using UPTrace;
 ```
 &ensp;
-# 2. 初始化 SDK
+# 3. 初始化 SDK
+!>Unity-Android初始化前要求 [设置CustomerId](/tasdk/unity/unity_init?id=set_customerid)
 
+初始化API：
 ```csharp
 public static void initTraceSDKWithCallback(string productId, string channelId, Action<string> success, Action<string> fail)
 
@@ -19,6 +28,8 @@ public static void initTraceSDKWithCallback(string productId, string channelId, 
 |channelId | 产品推广渠道 ，不可为空。默认可填 "32400"  |
 |success  |初始化成功回调   |
 |fail   |初始化失败回调   |
+
+!>初始化后必须在回调中进行 [AppsFlyer相关设置](/tasdk/unity/unity_appsflyer.md)
 
 调用示例：
 
@@ -49,10 +60,8 @@ public void initFailCallback(string message)
 }
 
 ```
-&ensp;
+# 4. Debug模式
 
-
-# 3. Debug模式
 用于打印上报的信息，请在发布环境中设置为false
 >请在初始化之前调用
 
@@ -64,9 +73,11 @@ public static void enalbeDebugMode(bool isOpen);
 ``` csharp
 UPTraceApi.enalbeDebugMode(true);
 ```
+#  <span id="set_customerid">5. 设置Customer_Id(Amazon)</span>
 
-# 4.设置 CUSTOMER_ID (仅Android设备)
-统计包中设置 customerId 参数，用于设置 AndroidId，此方法在发布 **GooglePlay 以外**的版本时才调用。
+>GP包不能设置该项，相反如果您是Amazon包则必须设置
+
+统计包中设置 customerId 参数，用于设置 AndroidId，此方法在发布 **GooglePlay 以外**的版本如Amazon时才调用。
 
 ```csharp
 void setCustomerIdForAndroid(string customerId);
@@ -90,8 +101,36 @@ private String GetAndroidID(){
 	return android_id;
 }
 ```
+到此，您已经完成了SDK的初始化。
 
 
+接下来，您可以根据自己的需求，选取对应的功能并集成到项目里：
+
+- [事件打点](/tasdk/unity/unity_log.md)
+- [登录上报（未使用AASDK）](/tasdk/unity/unity_login1.md)
+- [登录上报（使用AASDK）](/tasdk/unity/unity_login2.md)
+- [支付上报](/tasdk/unity/unity_iap.md)
+- [在线用户时长上报](/tasdk/unity/unity_duration_report.md)
+- [用户标签](/tasdk/unity/unity_tag.md)
+
+此外，在开发的过程中，如果您有获取TASDK一些参数的需求，可以参考下边的常见问题
+
+# 6.常见问题
+><div id ="tasdk_unity_faq_userid">获取TASDK userId</div>
+
+userId即TADSK-iOS中的staToken
+
+userId是TASDK唯一用户标识，在用户首次安装并在初始化完成后生成，该ID绑定设备gaid或IDFA，卸载重装一般不发生变化
+
+Unity中获取方式为：
+```C#
+UPTraceApi.getUserId();
+```
+><div id ="tasdk_unity_faq_openid">获取TASDK openId</div>
+
+```C#
+UPTraceApi.getOpenId();
+```
 
 
 

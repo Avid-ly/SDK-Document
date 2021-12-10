@@ -15,9 +15,13 @@
   * [工程引入](aasdk/android/android_start.md)
   * [API介绍](aasdk/android/android_api.md)
 
-  
 * Unity
-  * [iOS接入帮助](aasdk/unity/unity_ios_help.md)
-  * [Andorid接入帮助](aasdk/unity/unity_android_help.md)
-  * [API介绍](aasdk/unity/unity_api.md)
+  * [开始使用](aasdk/unity/unity_start.md)
+  * 项目设置
+    * [iOS项目设置](aasdk/unity/unity_ios_help.md)
+    * [Andorid项目设置](aasdk/unity/unity_android_help.md)
+  * [初始化](aasdk/unity/unity_init.md)
+  * [登录](aasdk/unity/unity_login.md)
+  * [用户中心](aasdk/unity/unity_user_center.md)  
+  * [API概览](aasdk/unity/unity_api.md)
   * [常见问题](aasdk/unity/unity_faq.md)

@@ -22,6 +22,7 @@
 	* [快速集成](mssdk/android/android_banner1.md)
 	* [自定义横幅广告](mssdk/android/android_banner2.md)
   * [GDPR调用](mssdk/android/android_gdpr.md)
+  * [API概览](mssdk/android/android_api.md)
   * [常见问题](mssdk/android/android_faq.md)
   
 * Unity
@@ -34,4 +35,5 @@
   * [插屏广告](mssdk/unity/unity_interstitial.md)
   * [横幅广告](mssdk/unity/unity_banner.md)
   * [GDPR调用](mssdk/unity/unity_gdpr.md)
+  * [API概览](mssdk/unity/unity_api.md)
   * [常见问题](mssdk/unity/unity_faq.md)
