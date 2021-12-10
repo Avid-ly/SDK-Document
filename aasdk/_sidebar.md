@@ -12,8 +12,13 @@
   * [常见问题](aasdk/ios/ios_faq.md)
 
 * Android
-  * [工程引入](aasdk/android/android_start.md)
-  * [API介绍](aasdk/android/android_api.md)
+  * [开始使用](aasdk/android/android_start.md)
+  * [初始化](aasdk/android/android_init.md)
+  * [登录](aasdk/android/android_login.md)
+  * [用户中心](aasdk/android/android_usercenter.md)
+  * [API概览](aasdk/android/android_api.md)
+  * [常见问题](aasdk/android/android_faq.md)
+
 
 * Unity
   * [开始使用](aasdk/unity/unity_start.md)

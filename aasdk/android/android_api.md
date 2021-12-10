@@ -1,55 +1,51 @@
-# 1. 初始化 SDK
+### 以下是AASDK的API列表，方便您查询和使用
 
-请在`主 Activity`中尽早初始化 SDK，并根据游戏传入对应的`productId`参数，同时调用判断注册登录成功与否的回调。
 
+
+# AASdk
+
+1、sdk初始化方法
 ```java
-public static void initSdk(String productId, AccountCallback callback));
+public static void initSdk(Context context,String productid);
 ```
 
-示例：
+|  参数   | 描述  | |
+|  ----  | ----  | ----  |
+| context  | 全局上下文 |必填|
+| productId | 产品id（由我方提供） |必填|
 
-```java
-AASdk.initSdk(this, BuildConfig.productId);
-```
 
 &ensp;
 
-# 2. 用户登录
-
-请在`主 Activity`中合适位置调用此方法。
+2、 用户登录与控制显示
 
 ```java
-public static void accountLogin(Context context);
+public static void accountLogin(Context context,Boolean isVisible);
 ```
 
-示例：
+|  参数   | 描述  | |
+|  ----  | ----  | ----  |
+| context  | 全局上下文 |必填|
+| isVisible | 控制显示自动登录动画是否显示，默认是false，不显示 |选填|
 
-```java
-AASdk.accountLogin(MainActivity.this);
-```
-# 3. 用户登录与控制显示
 
-请在`主 Activity`中合适位置调用此方法,此方法用于控制显示自动登录动画是否显示，默认是false，不显示。
-
-```java
-public static void accountLogin(Context context.boolean isVisble);
-```
-
-示例：
-
-```java
-
-// 默认隐藏自动登录的动画,若想要显示自动登录动画请设置为true
-AASdk.accountLogin(MainActivity.this,true);
-```
 
 &ensp;
 
-# 4. 获取登录回调
+3、 进入用户中心
 
-## 4.1 获取登录回调（GGID 和登录类型）
-> &bull;&ensp;GGID：用户的登录标识<br>
-> &bull;&ensp;mode：用户登录类型</br>
+```java
+    public static void showUserManagerUI(Context context);
+```
+
+|  参数   | 描述  | |
+|  ----  | ----  | ----  |
+| context  | 全局上下文 |必填|
+
+
+&ensp;
+
+3、 获取登录回调（GGid 和登录类型）
 
 ```java
 public interface setAAUGgidCallback {
@@ -58,28 +54,17 @@ public interface setAAUGgidCallback {
     void onGameGuestIdLoginFailed(int code, String msg);
 }
 ```
+|  参数   | 描述  |
+|  ----  | ----  |
+| ggid  | 用户的登录标识 |
+| mode  | 用户登录类型 |
+| code  | 登陆失败标识 |
+| msg  | 登陆失败详细信息 |
 
-示例：
+&ensp;
 
-```java
-AASdk.setAAUGgidCallback(new AASGgidCallback() {
-    @Override
-    public void onGameGuestIdLoginSuccess(String ggid, int mode) {
-        String messge = "MainActivity onLoginSuccess: " + ggid;
-        Log.i(TAG, "onGameGuestIdLoginSuccess: " + messge);
-    }
+4、 获取登录回调（token 和登录类型）
 
-    @Override
-    public void onGameGuestIdLoginFailed(int code, String msg) {
-        String messge = "MainActivity onLoginFail: " + msg;
-        Log.i(TAG, "onGameGuestIdLoginFailed: " + messge);
-    }
-});
-```
-
-## 4.2 获取登录回调（token 和登录类型）
-> &bull;&ensp;token：用户的登录标识<br>
-> &bull;&ensp;mode：用户登录类型</br>
 
 ```java
 public interface setAAUTokenCallback {
@@ -88,39 +73,17 @@ public interface setAAUTokenCallback {
     void onUserTokenLoginFailed(int code, String msg);
 }
 ```
+|  参数   | 描述  |
+|  ----  | ----  |
+| token  | 用户的登录标识 |
+| mode  | 用户登录类型 |
+| code  | 登陆失败标识 |
+| msg  | 登陆失败详细信息 |
 
-示例：
 
-```java
-AASdk.setAAUTokenCallback(new AASTokenCallback() {
-    @Override
-    public void onUserTokenLoginSuccess(String token, int mode) {
-        String messge = "MainActivity onLoginSuccess: " + token;
-        Log.i(TAG, "onUserTokenLoginSuccess: " + messge);
-    }
-
-    @Override
-    public void onUserTokenLoginFailed(int code, String msg) {
-        String messge = "MainActivity onLoginFail: " + msg;
-        Log.i(TAG, "onUserTokenLoginFailed: " + messge);
-    }
-});
-```
 &ensp;
 
-# 5. 进入用户中心
-
-```java
-    public static void showUserManagerUI(Context context);
-```
-
-示例：
-
-```java
-    AASdk.showUserManagerUI(MainActivity.this);
-```
-&ensp;
-# 6. 获取 token
+5、 获取 token
 
 登录 Facebook 成功、进入用户中心后，获取 token。
 
@@ -128,13 +91,9 @@ AASdk.setAAUTokenCallback(new AASTokenCallback() {
     public static void getFacebookLoginedToken();
 ```
 
-示例：
-
-```java
-   String fbToken=AASdk.getFacebookLoginedToken();
-```
 &ensp;
-# 7. 获取 GGID
+
+6、  获取 GGID
 
 登录 Facebook 成功、进入用户中心后，获取 GGID。
 
@@ -144,21 +103,17 @@ AASdk.setAAUTokenCallback(new AASTokenCallback() {
     public static void getLoginedGGid();
 ```
 
-示例：
 
-```java
-   String ggid=AASdk.getLoginedGGid();
-```
-# 8.隐藏与显示Google play 登录入口
-> 请在accountLogin前使用
+&ensp;
+
+7、 隐藏与显示Google play 登录入口
+
 
 ```java
    public static void setGPLoginVisible(boolean isVisible)
 ```
+|  参数   | 描述  | |
+|  ----  | ----  | ----  |
+| isVisible  | true为显示，false为隐藏|必填|
 
-示例：
-
-```java
-   AASdk.setGPLoginVisible(false);
-```
 
