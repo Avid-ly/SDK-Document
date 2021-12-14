@@ -3,7 +3,7 @@
 <center>TASDK接入文档</center>
 
 * iOS
-  * [开始使用](tasdk/ios/ios_start.md)
+  * [快速开始](tasdk/ios/ios_start.md)
   * [项目设置](tasdk/ios/ios_setting.md)
   * [初始化](tasdk/ios/ios_init.md)
   * [事件打点](tasdk/ios/ios_log.md)
@@ -19,7 +19,7 @@
   * [常见问题](tasdk/ios/ios_faq.md)
 
 * Android
-  * [开始使用](tasdk/android/android_start.md)
+  * [快速开始](tasdk/android/android_start.md)
   * [初始化](tasdk/android/android_init.md)
   * [事件打点](tasdk/android/android_log.md)
   * 登录上报
@@ -32,7 +32,7 @@
   * [AppsFlyer处理](tasdk/android/android_appsflyer.md)
   * [常见问题](tasdk/android/android_faq.md)
 * Unity
-  * [开始使用 ](tasdk/unity/unity_start.md)
+  * [快速开始](tasdk/unity/unity_start.md)
   * 项目设置
     * [Andorid设置](tasdk/unity/unity_android.md)
     * [iOS设置](tasdk/unity/unity_ios.md)
