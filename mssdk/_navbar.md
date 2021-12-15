@@ -8,5 +8,5 @@
 	* [TASDK - 统计SDK](/tasdk/) 
 	* [MSSDK - 广告SDK](/mssdk/) 
 	* [AASDK - 账户SDK](/aasdk/) 
-	* [PSSDK - 隐私SDK](/pssdk/) 
 	* [CSSDK - 客服SDK](/cssdk/) 
+	* [PSSDK - 隐私SDK](/pssdk/) 
