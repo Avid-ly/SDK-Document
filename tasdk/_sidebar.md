@@ -31,6 +31,7 @@
   * [测试套件](tasdk/android/android_test_help.md)
   * [AppsFlyer处理](tasdk/android/android_appsflyer.md)
   * [常见问题](tasdk/android/android_faq.md)
+
 * Unity
   * [快速开始](tasdk/unity/unity_start.md)
   * 项目设置
@@ -49,5 +50,14 @@
   * [隐私信息处理](tasdk/unity/unity_gdpr.md)
   * [API概述](tasdk/unity/unity_api.md)
   * [常见问题](tasdk/unity/unity_faq.md)
+
+* JavaScript
+  * [快速开始](tasdk/js/js_start.md)
+  * [事件打点](tasdk/js/js_log.md)
+  * [登录上报](tasdk/js/js_login.md)
+  * [支付上报](tasdk/js/js_iap.md)
+    * [Facebook](tasdk/js/js_iap_facebook.md)
+    * [xsolla](tasdk/js/js_iap_xsolla.md) 
+  * [退出登录](tasdk/js/js_logout.md)
 
 * [S2S 服务端事件上报帮助文档](tasdk/s2s.md)

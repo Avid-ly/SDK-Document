@@ -11,6 +11,7 @@ TASDK 事件统计SDK，主要用于统计用户在游戏中产生的行为事�
 -  [iOS 帮助文档](/tasdk/ios/ios_start.md)
 -  [Android 帮助文档](/tasdk/android/android_start.md)
 -  [Unity 帮助文档](/tasdk/unity/unity_start.md)
+-  [JavaScript 帮助文档](/tasdk/js/js_start.md)
 
 <br>
 

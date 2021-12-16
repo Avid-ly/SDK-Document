@@ -1,0 +1,28 @@
+<center>数数平台使用文档</center>
+
+* [数数平台基础数据说明文档](thinkdata/doc/)
+  * [TA使用指南](thinkdata/doc/)
+  * [产品活跃留存条件](thinkdata/doc/)
+  * [常见问题Q&A](thinkdata/doc/)
+  	* [一、操作类问题](thinkdata/doc/)
+  	* [二、创建属性标签类问题](thinkdata/doc/)
+  	* [三、报表实现类问题](thinkdata/doc/)
+  	* [四、数据疑问类问题](thinkdata/doc/)
+  * [报表使用说明](thinkdata/doc/)
+  	* [特定周期活跃的新增用户每日前N次活跃时长分布](thinkdata/doc/)
+
+* [数数平台看板样例说明文档](thinkdata/doc/)
+  * [SLOTS](thinkdata/doc/)
+  	* [破产分析](thinkdata/doc/)
+  	* [机台分析](thinkdata/doc/)
+  	* [用户数据分析](thinkdata/doc/)
+  	* [流失分析](thinkdata/doc/)
+  * [休闲](thinkdata/doc/)
+  	* [事件分析](thinkdata/doc/)
+  	* [漏斗分析](thinkdata/doc/)
+  	* [分布分析](thinkdata/doc/)
+  * [中重度](thinkdata/doc/)
+  * [BINGO](thinkdata/doc/)
+
+* [统计Key时间说明](thinkdata/doc/)
+* [用户安装说明](thinkdata/doc/)
