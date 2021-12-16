@@ -81,7 +81,7 @@ pod install
 
 将 `TraceAnalysisSDK.framework` 导入至工程中，并勾选如下配置
 
-![](http://doc.gamehaus.com/uploads/201807/5b3c81f77d038_5b3c81f7.png)
+![](../image/5b3c81f77d038_5b3c81f7.png)
 
 
 
@@ -93,7 +93,7 @@ pod install
 
    如下图所示:
    
-   ![](http://doc.gamehaus.com/uploads/201905/5ceb982ea61e9_5ceb982e.png)
+   ![](../image/5ceb982ea61e9_5ceb982e.png)
    
 此刻您已经完成了SDK的安装。请尝试编译，如果编译通过请进行下一步[项目设置](/tasdk/ios/ios_setting.md)。如果您编译不通过，请参考文档最后的常见编译问题解决
 

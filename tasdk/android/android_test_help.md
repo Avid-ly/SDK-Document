@@ -35,31 +35,31 @@
 ```
 ## 3.3 测试套件导航
 
-![helper01](http://doc.gamehaus.com/uploads/202105/60990305b21bb_60990305.png "helper01")
+![helper01](../image/60990305b21bb_60990305.png "helper01")
 
 ###  3.3.1 Initialize-TASDK初始化检查
 
 图中 **TASDK Version** 后面的数字便是当前SDK的版本号,绿色表示tasdk初始化成功，点击显示当前用户的userId
 
-![line1](http://doc.gamehaus.com/uploads/202105/6099049214a4b_60990492.png "line1")
+![line1](../image/6099049214a4b_60990492.png "line1")
 
 ###  3.3.2 Login-登录上报检查
 登录上报相关，包括游客登录和fb登录，点击之后loading进行上报，绿色表示通过,如果您游戏不包含facebook的登录，将不会显示facebook登录按钮
 
-![line2](http://doc.gamehaus.com/uploads/202105/609904c93edc5_609904c9.png "line2")
+![line2](../image/609904c93edc5_609904c9.png "line2")
 
 ###  3.3.3 Pay-支付上报检查
 支付的测试，点击显示输入框，输入框中输入商品id,支付成功，绿色表示通过
 > 目前只支持GP市场的google pay测试
 
-![pay](http://doc.gamehaus.com/uploads/202105/60990607a1852_60990607.jpg "pay")
+![pay](../image/60990607a1852_60990607.jpeg "pay")
 
 ###  3.3.4 Privacy-隐私授权检查
 对应的是方法 disableAccessPrivacyInformation() 的调用情况，如果调用了会显示true
 ```groovy
 void disableAccessPrivacyInformation();
 ```
-![](http://doc.gamehaus.com/uploads/202105/609907b947637_609907b9.jpg)
+![](../image/609907b947637_609907b9.jpeg)
 
 相关链接：
 [禁止获取设备信息](/tasdk/android/android_init?id=_34-%e7%a6%81%e6%ad%a2%e8%8e%b7%e5%8f%96%e8%ae%be%e5%a4%87%e4%bf%a1%e6%81%af.md)
@@ -72,5 +72,5 @@ void disableAccessPrivacyInformation();
 ```groovy
   < meta-data android:name="CHANNEL" android:value="Amazon"/ >
 ```
-![](http://doc.gamehaus.com/uploads/202105/609907d916d22_609907d9.jpg)
+![](../image/609907d916d22_609907d9.jpeg)
 

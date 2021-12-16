@@ -20,7 +20,7 @@ Objective-C语言中类别，Unix的标准静态库实现和Objective-C的动态
 
 在 TARGETS > Build Setting > Linking > Other Linker Flags 中添加 `-ObjC`：
 
-![](http://doc.gamehaus.com/uploads/201807/5b3c85c61e5f1_5b3c85c6.png)
+![](../image/5b3c85c61e5f1_5b3c85c6.png)
 
 <br>
 
@@ -28,7 +28,7 @@ Objective-C语言中类别，Unix的标准静态库实现和Objective-C的动态
 
 开启 Keychain Sharing：
 
-![](http://doc.gamehaus.com/uploads/201807/5b3c860d2db60_5b3c860d.jpeg)
+![](../image/5b3c860d2db60_5b3c860d.jpeg)
 
 
 恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK[初始化](/tasdk/ios/ios_init)了
