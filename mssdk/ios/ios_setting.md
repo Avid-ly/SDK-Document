@@ -137,7 +137,7 @@ Admob和Applovin需要在info.plist文件中添加对应的key，才能正常使
 - GADApplicationIdentifier
 - AppLovinSdkKey
 
-![](http://doc.gamehaus.com/uploads/202102/603753a83bb45_603753a8.png)
+![](../image/603753a83bb45_603753a8.png)
 
 !> 如果不设置，会导致广告无法填充和项目闪退等不可控情况。
 

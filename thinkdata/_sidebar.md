@@ -1,0 +1,28 @@
+<center>数数平台使用文档</center>
+
+* [数数平台基础数据说明文档](thinkdata/doc/数数平台基础数据说明文档.md)
+  * [TA使用指南](thinkdata/doc/TA使用指南.md)
+  * [产品活跃留存条件](thinkdata/doc/产品活跃留存条件.md)
+  * [常见问题Q&A](thinkdata/doc/常见问题Q&A.md)
+  	* [操作类问题](thinkdata/doc/操作类问题.md)
+  	* [创建属性标签类问题](thinkdata/doc/创建属性标签类问题.md)
+  	* [报表实现类问题](thinkdata/doc/报表实现类问题.md)
+  	* [数据疑问类问题](thinkdata/doc/数据疑问类问题.md)
+  * [报表使用说明](thinkdata/doc/报表使用说明.md)
+  	* [特定周期活跃的新增用户每日前N次活跃时长分布](thinkdata/doc/特定周期活跃的新增用户每日前N次活跃时长分布.md)
+
+* [数数平台看板样例说明文档](thinkdata/doc/数数平台看板样例说明文档.md)
+  * [SLOTS](thinkdata/doc/SLOTS.md)
+  	* [破产分析](thinkdata/doc/SLOTS_破产分析.md)
+  	* [机台分析](thinkdata/doc/SLOTS_机台分析.md)
+  	* [用户数据分析](thinkdata/doc/SLOTS_用户数据分析.md)
+  	* [流失分析](thinkdata/doc/SLOTS_流失分析.md)
+  * [休闲](thinkdata/doc/休闲.md)
+  	* [事件分析](thinkdata/doc/休闲_事件分析.md)
+  	* [漏斗分析](thinkdata/doc/休闲_漏斗分析.md)
+  	* [分布分析](thinkdata/doc/休闲_分布分析.md)
+  * [中重度](thinkdata/doc/中重度.md)
+  * [BINGO](thinkdata/doc/BINGO.md)
+
+* [统计Key时间说明](thinkdata/doc/统计Key事件说明.md)
+* [用户安装说明](thinkdata/doc/用户安装说明.md)

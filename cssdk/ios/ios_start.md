@@ -83,7 +83,7 @@ pod install
 
 请同时将`CService.framework`与`CService.bundle`两个文件添加至`Xcode`工程目录下<br>;（需勾选 Xcode 弹框中的 “**Copy items if needed**” 和 “**Create groups**”）。如下图所示：</br>
 
-![](http://doc.gamehaus.com/uploads/202001/5e0dc28648883_5e0dc286.png)
+![](../image/5e0dc28648883_5e0dc286.png)
 
 3）添加第三方依赖库
 
