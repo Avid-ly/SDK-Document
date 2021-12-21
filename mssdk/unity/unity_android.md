@@ -49,33 +49,51 @@
 # 6. Demo
 &ensp;&ensp;&ensp;有关广告 `MSSDK` 的接入及使用，可查看 [Demo工程](https://github.com/wawo00/Mssdk_Unity_Demo.git)。
 
+恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK[初始化](/mssdk/unity/unity_init)了,遇到编译或其他问题可以参考以下常见问题
+
 ---
-# 7. 常见问题
-## 7.1 方法数超过 64K 
-如因接入 MSSDK 导致方法数超过 65535，无法正常打包，请采用以下建议，直至问题解决。
-### 7.1.1 追加multidex支持
-在 `launcherTemplate.gradle` 中追加下述内容
-```
-dependencies {
-   	...
-   	//multidex
-   	 implementation 'androidx.multidex:multidex:2.0.1'
-    }
-	
-android {
-    defaultConfig {
-	    ...
-        multiDexEnabled true
-		...
-    }
-  }
-	
-```
-### 7.1.2 使用multidex application
-在 `LauncherManifest.xml` 中追加下述内容
+# <span id="mssdk-unitybianyi-faq">7. 常见问题</span>
+## <span id="mssdk_unity_faq1">7.1 方法数超过 64K</span>
+如因接入 MSSDK 导致方法数超过 65535，无法正常打包，请参考以下文档解决。</br>
+[为方法数超过 64K 的应用启用 MultiDex](https://developer.android.com/studio/build/multidex?hl=zh-cn)
 
-    <application 
-          android:name="android.support.multidex.MultiDexApplication">
-        </application>
+## <span id="mssdk_unity_faq2">7.2 The minComplieSdk (31) specified in a dependency's AAR.......jetified-androidx.work.work-runtime-2.7.0...</span>
+出现下图所示编译问题时，需要指定编译版本为API 31
+![](../image/faq1.png)
 
-恭喜您，到此已经完成了所有的项目设置，接下来您可以下一个步骤，SDK[初始化](/mssdk/unity/unity_init)了
+</br>
+在gradle文件的android标签下指定编译版本
+
+![指定编译版本为31](../image/faq2.png)
+
+
+## <span id="mssdk_unity_faq3">7.3 Missing 'package' key attribute on element package at ...</span>
+gradle编译找不到package或 <queries>标签报错，
+
+```Java
+Missing 'package' key attribute on element package at [:com.my.target.mytarget-sdk-5.11.3:]
+AndroidManifest Validation failed
+```
+
+```Java
+com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
+error: unexpected element <queries> found in <manifest>.
+```
+
+
+</br>
+
+![](../image/faq3.png)
+
+**需要升级baseProjectTemplate.gradle 中的对应的gradle插件版本来支持新的标签类型**
+
+![](../image/faq4.png)
+
+![](../image/faq5.png)
+
+
+
+
+
+
+
