@@ -1,7 +1,7 @@
 # 常见问题
 
 ## 1 编译问题
--  [Could not HEAD  ”http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/“](/mssdk/android/android_start?id=_71-could-not-head)
+-  [Could not HEAD  ”http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/“](/mssdk/android/android_start?id=_61-could-not-head)
 ## 2 使用问题
 
 ### 2.1 Fatal Exception: java.lang.NoClassDefFoundError: com.mopub.mobileads.WebViewCacheService

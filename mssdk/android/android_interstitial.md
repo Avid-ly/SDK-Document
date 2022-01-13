@@ -121,7 +121,7 @@ public void setInterstitialAdListener(MsInterstitialAdListener listener)
 
         @Override
         public void onDisplayed() {
-            // 此处为广告展示的回调
+            // 此处为广告展示的回调(可能没有)
         }
         @Override
         public void onShowFailed(String reason) {

@@ -80,7 +80,7 @@ mVideoAd.setLoadCallBack(new MsRewardVideoLoadCallback() {
 !> 请不要重复调用此方法，此方法应在展示时作为判断条件使用，不应作为是否加载成功广告的判断条件，广告加载与否请使用LoadCallBack
 
 ```java
-public void isReady()
+public boolean isReady()
 ```
 
 ## 3.4 展示广告
@@ -99,6 +99,10 @@ public void isReady()
 ## 3.5 处理广告事件
 广告可以通过`setVideoAdListener`方法设置回调接口，原则上您只需要关心`onVideoAdReward`和`onVideoAdDontReward`两个回调方法，来决定您是否需要向用户发送奖励
 
+```java
+public void setInterstitialAdListener(MsRewardVideoAdListener listener)
+```
+使用示例
 >`onVideoAdReward`回调和`onVideoAdClose`出现顺序不一定
 ```java
 mVideoAd.setVideoAdListener(new MsRewardVideoAdListener() {
@@ -114,7 +118,7 @@ mVideoAd.setVideoAdListener(new MsRewardVideoAdListener() {
 
     @Override
     public void onVideoAdDisplayed() {
-        // 此处为广告展示的回调
+        // 此处为广告展示的回调 (可能没有)
     }
 
     @Override

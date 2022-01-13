@@ -18,16 +18,21 @@ MsSDK.init(this, new MsSdkInitializationListener() {
     @Override
     public void onInitializationFinished() {
         Log.i(TAG, "onInitializationFinished: ");
-        }
+    }
+
+    @Override
+    public void onInitializationFail(String reason) {
+        Log.i(TAG, "onInitializationFail: "+reason);
     }
 });
 ```
 
 # 3 开启 debug
->为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭
+>为方便您的接入调试，请您在初始化之前通过以下方法开启调试log，并且需要在正式发布时将其关闭
 ```java
 MsSDK.setDebuggable(boolean isOpen);
 ```
+
 # 4 注册生命周期回调
 >为了正常加载和展示广告，请在游戏的主activity中注册相应回调。
 ```java
@@ -83,3 +88,12 @@ public  class MainActivity extends AppCompatActivity {
     }
 }
 ```
+# 5 接入验证
+>为方便验证接入是否正常，请在游戏中通过明显按钮调用以下方法，并且需要在正式发布时将其关闭
+
+```java
+MediationTestSuite.launch(Context context);
+```
+
+
+

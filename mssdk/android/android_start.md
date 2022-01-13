@@ -13,7 +13,7 @@
 
 ```groovy
     dependencies {
-     implementation 'com.ms.sdk:mssdk:1.1.0.6'
+     implementation 'com.ms.sdk:mssdk:2.0.0.2'
     }
 
 ```
@@ -24,23 +24,32 @@
 部分广告商的 SDK 运行依赖一些公共的第三方库，使用 Android Studio 构建的项目可以通过下述方式来将所依赖的第三方库导入你的项目。
 
 ### 2.2.1 配置仓库地址
-首先在您项目的module级的 `build.gradle` 文件中追加仓库地址
+
+首先在您项目的project级的 `build.gradle` 文件中追加仓库地址
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+```
+
+
+然后在您项目的module级的 `build.gradle` 文件中追加仓库地址
 ```groovy
 android {
     defaultConfig {
         //...
     }
 repositories {
-    flatDir {
-        dirs 'libs'
-    }
     google()
     mavenCentral()
-    maven { url 'https://jitpack.io' }
-    maven { url 'https://chartboostmobile.bintray.com/Chartboost' }
-    maven { url 'https://android-sdk.is.com/'}
-    maven { url 'https://artifact.bytedance.com/repository/pangle' }
-    maven { url 'https://mvnrepository.com/artifact/com.inmobi.monetization/inmobi-ads' }
+    maven {
+        url 'https://android-sdk.is.com/'
+    }
     maven { url "https://mvn-bx.dataverse.cn/repository/maven-releases/"}
 }
 
@@ -51,44 +60,18 @@ repositories {
 请在您的项目module级中的`build.gradle` 文件中按以下的方式添加依赖
  ```groovy   
   dependencies {
-    implementation('com.mopub:mopub-sdk:5.18.0@aar') {
-        transitive = true
-    }
-
-    implementation 'com.vungle:publisher-sdk-android:6.10.2'
-    implementation 'com.mopub.mediation:vungle:6.10.2.0'
-
-    implementation 'com.applovin:applovin-sdk:10.3.4'
-    implementation 'com.mopub.mediation:applovin:10.3.4.0'
-
-    implementation 'com.chartboost:chartboost-sdk:8.2.1'
-    implementation 'com.mopub.mediation:chartboost:8.2.1.0'
-
-    implementation 'com.facebook.android:audience-network-sdk:6.7.0'
-    implementation 'com.mopub.mediation:facebookaudiencenetwork:6.7.0.0'
-
-    implementation 'com.ironsource.sdk:mediationsdk:7.1.11'
-    implementation 'com.mopub.mediation:ironsource:7.1.11.0'
-
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.ads.mediation:adcolony:4.6.5.0'
+    implementation 'com.google.ads.mediation:applovin:10.3.5.0'
+    implementation 'com.google.ads.mediation:chartboost:8.2.1.0'
+    implementation 'com.google.ads.mediation:facebook:6.8.0.0'
+    implementation 'com.google.ads.mediation:fyber:8.1.0.0'
+    implementation 'com.google.ads.mediation:inmobi:10.0.1.0'
+    implementation 'com.google.ads.mediation:ironsource:7.1.12.1.0'
     implementation 'com.unity3d.ads:unity-ads:3.7.5'
-    implementation 'com.mopub.mediation:unityads:3.7.5.1'
-
-    implementation 'com.adcolony:sdk:4.6.4'
-    implementation 'com.mopub.mediation:adcolony:4.6.4.0'
-
-    implementation 'com.google.android.gms:play-services-ads:20.3.0'
-    implementation 'com.mopub.mediation:admob:20.3.0.0'
-
-    implementation 'com.pangle.global:ads-sdk:3.9.0.5'
-    implementation 'com.mopub.mediation:pangle:3.9.0.5.0'
-	
-    implementation 'com.inmobi.monetization:inmobi-ads:9.2.1'
-    implementation 'com.mopub.mediation:inmobi:9.2.1.1'
-	
-    implementation 'com.fyber.vamp:core-sdk:7.8.4'
-    implementation 'com.fyber.vamp:video-kit:7.8.4'
-    implementation 'com.fyber.vamp:mraid-kit:7.8.4'
-    implementation 'com.mopub.mediation:fyber:7.8.4.0'
+    implementation 'com.google.ads.mediation:unity:3.7.5.0'
+    implementation 'com.google.ads.mediation:vungle:6.10.2.0'
+    implementation ('com.google.android.ads:mediation-test-suite:2.0.0')
 }
 ```
 
@@ -109,25 +92,8 @@ repositories {
     </application>
 
 
-# 4 加入 Androidx 支持库
 
-**【注意】请务必将这些依赖库引入你的项目，否则会导致程序崩溃！**
-
-广告的正常展示需要 `androidx` 库的支持，请参考以下方式将其引入到您的项目中。
-
-可以通过以下的方式添加依赖
- ```groovy   
-    dependencies {
-    implementation 'androidx.browser:browser:1.2.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
-    implementation 'com.google.android.gms:play-services-base:17.5.0'
-    }
-```  
-
-
-# 5 修改 Proguard
+# 4 修改 Proguard
 如果你的项目使用了 `proguard`，你需要将 `proguard-project.txt` 文件中的内容复制粘贴到你项目使用的 `proguard` 配置文件中。
 ```groovy
 # 不做预校验，preverify是proguard的四个步骤之一，Android不需要preverify，去掉这一步能够加快混淆速度。
@@ -347,11 +313,11 @@ repositories {
 #pangle end
 ```
 
-# 6 Demo工程
+# 5 Demo工程
 为帮助您更好的了解MSSDK的接入以及使用，我们在这里提供了一个简单的[Demo工程](https://github.com/Avid-ly/Avidly-Android-MSSDK-AndroidStudio)。
 
-# 7  常见编译问题
-### 7.1 Could not HEAD...
+# 6  常见编译问题
+### 6.1 Could not HEAD...
 Q:`<Build: failed at`</br>
 `Could not HEAD 'http://bx-mvn.dataverse cn:18081/repository/maven-releases/com/...... >`
 
